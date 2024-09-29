@@ -1,6 +1,6 @@
 {
-  "name": "BELTAH-MD",
-  "description": "SCENE MD BOT was developed by Beltah.",
+  "name": "TECH-Z",
+  "description": "This BOT was developed by Beltah.",
   "keywords": [
     "bot",
     "node",
@@ -8,7 +8,7 @@
     "whatsapp"
   ],
   "logo": "https://telegra.ph/file/f1ba2c02a99fb2458090d.jpg",
-  "repository": "https://github.com/Taliahke/TALIAH-MD",
+  "repository": "https://github.com/Bbeltah/Tech-Z",
   "succes_url": "/",
   "stack": "container",
   "env": {
@@ -39,7 +39,7 @@
     },
     "BOT_MENU_LINKS": {
       "description": "add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://telegra.ph/file/170dc791433d9e62ea45f.mp4",
+      "value":"",
       "required": false
     },
     "PUBLIC_MODE": {
