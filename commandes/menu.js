@@ -36,21 +36,20 @@ const date = moment().format('DD-MM-YYYY');
     let infoMsg =  `
  ❍ 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃-𝐁𝐎𝐓 ❍ 
 ╭══➤ 𝐎𝐰𝐧𝐞𝐫 𝐢𝐧𝐟𝐨
-┃❂ 𝗢𝘄𝗻𝗲𝗿 : *${s.OWNER_NAME}*
-┃❂ 𝗣𝗿𝗲𝗳𝗶𝘅 : *[ ${s.PREFIXE} ]* 
-┃❂ 𝗠𝗼𝗱𝗲 : *${mode}*
-┃❂ 𝗗𝗮𝘁𝗲  : *${date}* 
-┃❂ 𝗧𝗶𝗺𝗲  : *${temps}*
+┃❂ *Owner* : ${s.OWNER_NAME}
+┃❂ *Prefix* : [ ${s.PREFIXE} ]
+┃❂ *Mode* :  ${mode}
+┃❂ *Date*  : ${date}
+┃❂ *Time*  : ${temps}
 ╰─────────────┈⊷
 ╭══➤ 𝐁𝐎𝐓 𝐒𝐘𝐒𝐓𝐄𝐌
-┃❂ 𝗦𝗮𝘃𝗲𝗿 : 𝗖𝗵𝗿𝗼𝗺𝗲 𝗟𝗶𝗻𝘂𝘅
-┃❂ 𝗕𝗼𝘁 𝗧𝘆𝗽𝗲 : 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 𝗯𝗼𝘁
-┃❂ 𝗨𝘀𝗲𝗱 𝗥𝗮𝗺 : 𝟳𝟵 𝗚𝗕
+┃❂ *Time Zone* : Africa/Nairobi 
+┃❂ *Saver*  : Chrome [ MacOs ]
+┃❂ *Bot Type* : WhatsApp Bot
+┃❂ *Bot Ram* : *78/164 GB*
 ╰─────────────┈⊷
 *Follow our channel for updates*
-➤ whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F
-*Join our public chat group* 
-➤ chat.whatsapp.com/CQvUnqaDK4fBjgMXvFEAsI`;
+➤ whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F`;
 let menuMsg =  `
 ╭══➤ 𝐁𝐨𝐭 𝐔𝐬𝐞𝐫
 ┃❂ *USER* : ${nomAuteurMessage} 
