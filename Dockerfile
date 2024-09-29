@@ -9,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/Taliahke/TALIAH-MD /root/Zokou_BOt
-WORKDIR /root/Zokou_Bot/
+RUN git clone https://github.com/Bbeltah/Tech-Z /root/Bbeltah_Bot
+WORKDIR /root/Bbeltah_Bot/
 
 
 COPY package.json .
