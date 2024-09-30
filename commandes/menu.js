@@ -6,7 +6,7 @@ const os = require("os");
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
-const readmore = more.repeat(4001)
+const Taphere = more.repeat(4001)
 
 zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
@@ -16,89 +16,86 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     
     if ((s.MODE).toLocaleLowerCase() != "yes") {
         mode = "private";
+   
     }
 
 
     
-
-    cm.map(async (com, index) => {
+ cm.map(async (com, index) => {
         if (!coms[com.categorie])
             coms[com.categorie] = [];
         coms[com.categorie].push(com.nomCom);
     });
 
-    moment.tz.setDefault('Africa/Nairobi');
+    moment.tz.setDefault("Africa/Nairobi");
 
-// Créer une date et une heure en GMT
+// Créer une date et une heure en EAT
 const temps = moment().format('HH:mm:ss');
-const date = moment().format('DD-MM-YYYY');
+const date = moment().format('DD/MM/YYYY');
 
-    let infoMsg =  `
- ❍ 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃-𝐁𝐎𝐓 ❍ 
-╭══➤ 𝐎𝐰𝐧𝐞𝐫 𝐢𝐧𝐟𝐨
-┃❂ *Owner* : ${s.OWNER_NAME}
-┃❂ *Prefix* : [ ${s.PREFIXE} ]
-┃❂ *Mode* :  ${mode}
-┃❂ *Date*  : ${date}
-┃❂ *Time*  : ${temps}
-╰─────────────┈⊷
-╭══➤ 𝐁𝐎𝐓 𝐒𝐘𝐒𝐓𝐄𝐌
-┃❂ *Time Zone* : Africa/Nairobi 
-┃❂ *Saver*  : Chrome [ MacOs ]
-┃❂ *Bot Type* : WhatsApp Bot
-┃❂ *Bot Ram* : *78/164 GB*
-╰─────────────┈⊷
-*Follow our channel for updates*
-➤ whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F`;
-let menuMsg =  `
-╭══➤ 𝐁𝐨𝐭 𝐔𝐬𝐞𝐫
-┃❂ *USER* : ${nomAuteurMessage} 
-╰─────────────┈⊷${readmore}
+  let infoMsg =  `
+
+ *👋 Hello* : *_${nomAuteurMessage}_*
+ 
+┏▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭
+▮ 『𝗠𝗔𝗜𝗡』
+▯  🌐 *Work Type* : 【${mode} mode】
+▮  🔑 *Starter* : [${s.PREFIXE}]
+▯  📜 Plugins : [${cm.length}] 
+▮  ⌚️ *Time* :  ${temps}
+▯  🖥️ *System* : [ Whiskeysockets ]
+▮  🌌 *Theme* : [ Ultra 5G speed ]
+▯  █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+└▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭
+┏────────────────⊷
+┃ 『𝗦𝗧𝗢𝗥𝗔𝗚𝗘』
+┃  📼 *Used Ram* : ${format(os.totalmem() - os.freemem())}
+┃  📼 *Total Ram* :${format(os.totalmem())}
+└─────═━┈┈━═─────⊷
+╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
+┇ 『𝗖𝗢𝗡𝗧』
+┇  🕵 *Dev* : 𝐁𝐞𝐥𝐭𝐚𝐡 𝐓𝐞𝐜𝐡 𝟐𝟓𝟒 🇰🇪
+┇  📱 *User* : ${s.OWNER_NAME}
+└▪︎─═━┈━═─ ═▪︎─═━┈━═─⊷
+╒✦•··············•••••••••··············•··•✦
+┇ 『𝗕𝗢𝗧 𝗦𝗧𝗔𝗧𝗨𝗦』
+┇   ─┉┈◈◉◈┈┉
+┇  📡 *Platform* : ${os.platform}
+┇  🎲 *Status* : Ultimate speed Bot
+┇  🗨️ *Series* : [Version 4 lite]
+╘✦•·············•••••••••··················•✦\n${readmore}`;
+ 
+    let menuMsg=` 
+
+▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣
+ 
+◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢
 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒
 `;
+
     for (const cat in coms) {
-        menuMsg += `
-╭═══❂ *${cat}* ❂
-┃╭═════════`;
+        menuMsg += `*╭────❒⁠⁠⁠⁠* *${cat}* *❒⁠⁠⁠⁠*`;
         for (const cmd of coms[cat]) {
-            menuMsg += `          
-┃❏➤  *${cmd}* `    
-        } 
-        menuMsg +=`
-┃╰════════
-╰═══════════⊷
-`
+            menuMsg += `  
+*┋* ${cmd}`;
+        }
+        menuMsg += `
+*┕───────────────────❒* \n`
     }
-  
-       menuMsg += `
-╭═══❂ *Bug Menu* ❂
-┃╭════════
-┃❏➤ *xʀᴇᴀᴄᴛ <ʀᴇᴘʟʏ ᴄʜᴀᴛ>*
-┃❏➤ *x <ɴᴜᴍʙᴇʀ|ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *x2 <ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *ɪᴏsʙᴜɢ <ɴᴜᴍʙᴇʀ|ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *ɪᴏsʙᴜɢ2 <ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *xᴀᴜᴅɪᴏ <ɴᴜᴍʙᴇʀ|ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *xᴀᴜᴅɪᴏ2 <ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *xsᴛɪᴄᴋᴇʀ <ɴᴜᴍʙᴇʀ|ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *xsᴛɪᴄᴋᴇʀ2 <ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *xʟᴏᴄ <ɴᴜᴍʙᴇʀ|ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *xʟᴏᴄ2 <ᴀᴍᴏᴜɴᴛ>*
-┃❏➤ *xʟɪsᴛ <ɴᴜᴍʙᴇʀ|ᴀᴍᴏᴜɴᴛ>*
-┃╰──════════
-╰═══════════⊷ 
-➤ 𝐁𝐨𝐭 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫
+
+    menuMsg += `
+    ➤ 𝐁𝐨𝐭 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫
 > 𝐀 𝐩𝐫𝐨𝐝𝐮𝐜𝐭 𝐨𝐟 𝐁𝐞𝐥𝐭𝐚𝐡 𝐓𝐞𝐜𝐡 𝐓𝐞𝐚𝐦
 > 𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲 𝐁𝐞𝐥𝐭𝐚𝐡 𝐊𝐞 𝐅𝐫𝐨𝐦 𝐊𝐞𝐧𝐲𝐚 
 
-𝗧𝗛𝗔𝗡𝗞 𝗬𝗢𝗨 𝗙𝗢𝗥 𝗟𝗢𝗩𝗜𝗡𝗚 𝗦𝗖𝗘𝗡𝗘-𝗠𝗗
+𝗧𝗛𝗔𝗡𝗞 𝗬𝗢𝗨 𝗙𝗢𝗥 𝗟𝗢𝗩𝗜𝗡𝗚 𝗦𝗖𝗘𝗡𝗘-𝗠�⁠⁠⁠⁠
 `;
 
    var lien = mybotpic();
 
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" , gifPlayback : true }, { quoted: ms });
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" , gifPlayback : true }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -108,7 +105,7 @@ let menuMsg =  `
 // Vérification pour .jpeg ou .png
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
-        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" }, { quoted: ms });
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "*Ibrahim-tech*" }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
