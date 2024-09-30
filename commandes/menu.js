@@ -41,7 +41,7 @@ const date = moment().format('DD/MM/YYYY');
 ▮ 『𝗠𝗔𝗜𝗡』
 ▯  🌐 *Work Type* : 【${mode} mode】
 ▮  🔑 *Starter* : [${s.PREFIXE}]
-▯  📜 Plugins : [${cm.length}] 
+▯  📜 Plugins : [${cm.length}0] 
 ▮  ⌚️ *Time* :  ${temps}
 ▯  🖥️ *System* : [ Whiskeysockets ]
 ▮  🌌 *Theme* : [ Ultra 5G speed ]
