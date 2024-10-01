@@ -30,7 +30,7 @@ zokou({
 
       zk.sendMessage(origineMessage, songDetails, { quoted: commandeOptions.ms });
 
-      const response = await axios.get(`https://api-gifted-test-460bb726857c.herokuapp.com/api/v1/ytmp3?url=${video.url}`, {
+      const response = await axios.get(`https://api.cafirexos.com/api/v1/ytmp3?url=${video.url}`, {
         responseType: "stream"
       });
 
@@ -83,7 +83,7 @@ zokou({
 
       zk.sendMessage(origineMessage, videoDetails, { quoted: commandeOptions.ms });
 
-      const response = await axios.get(`https://api-gifted-test-460bb726857c.herokuapp.com/api/v1/ytmp3?url=${video.url}`, {
+      const response = await axios.get(`https://api.cafirexos.com/api/v1/ytmp3?url=${video.url}`, {
         responseType: "stream"
       });
 
