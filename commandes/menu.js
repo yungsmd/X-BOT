@@ -36,7 +36,7 @@ const date = moment().format('DD/MM/YYYY');
     let infoMsg =  `
 ╭─────═[ 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 ]═─────⋆
 ├━━━━━━━━━━━━━━━━┈─⋆
-│┠─═[ 𝗠𝗔𝗜𝗡 ]
+│┠─═[ *MAIN INFO* ]
 │╭───────────────···
 ┴│▸ *Bot Mode* : 【${mode} mode】
 ⬡│▸ *Owner* : ${s.OWNER_NAME}
@@ -44,14 +44,9 @@ const date = moment().format('DD/MM/YYYY');
 ⬡│▸ *Plugins* : [ 245 ] 
 ⬡│▸ *Time* :  ${temps}
 ⬡│▸ *Today* : [ ${date} ]
-⬡│▸ *Time Zone* : [ Africa/Nairobi ]
-⬡│▸ *Used Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-┬╰────────────────···
-├━━━━━━━━━━━━━━━━┈─⋆
 `;
-let menuMsg =  `│┠─═[ 𝗖𝗢𝗡𝗧 ] 
-│╭───────────────···
-┴│▸ *Hello 👋* *${nomAuteurMessage}*
+let menuMsg =  `⬡│▸ *Bot User* *${nomAuteurMessage}*
+⬡│▸ *Time Zone* : [ Africa/Nairobi ] 
 ┬╰────────────────···
 ├━━━━━━━━━━━━━━━━┈─⋆
 │┠─═[ *SUPPORT LINKS* ]
@@ -63,7 +58,6 @@ let menuMsg =  `│┠─═[ 𝗖𝗢𝗡𝗧 ]
 ⬡ *TELEGRAM LINK*
 │▸ t.me/beltah254 
 ┬╰────────────────···
-├━━━━━━━━━━━━━━━━┈─⋆
 ╘✦•·············•••••••••···············•••••••••··················•✦\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʙᴇʟᴛᴀʜ ʜᴀᴄᴋɪɴɢ ᴛᴇᴀᴍ🇰🇪\n\n${readmore}
 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒
 `;
