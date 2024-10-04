@@ -28,7 +28,7 @@ const handleVideoSearch = async (dest, zk, commandeOptions, type) => {
 
         const infoMess = {
           image: { url: videos[0].thumbnail },
-          caption: `*ALPHA-MD ${type} PLAYER*\n` +
+          caption: `*BELTAH-MD ${type} DOWNLOADER*\n` +
                    `╔══════════════════𝄡\n` +
                    `║ *Title:* ${title}\n` +
                    `║ *Quality:* ${quality}\n` +
@@ -39,7 +39,7 @@ const handleVideoSearch = async (dest, zk, commandeOptions, type) => {
                    `╚═══════════════════𝄡\n` +
                    `𝄤 *Direct YtLink:* ${videoUrl}\n` +
                    `╔═══════════════════𝄡\n` +
-                   `𝄠 *_Regards keithkeizzah._*\n` +
+                   `║ *_POWERED BY BELTAH HACKING TEAM_*\n` +
                    `╚═══════════════════𝄡`
         };
 
@@ -51,7 +51,7 @@ const handleVideoSearch = async (dest, zk, commandeOptions, type) => {
 
         await zk.sendMessage(dest, messageOptions, { quoted: ms });
 
-        repondre(`Download successful for your ${type.toLowerCase()} using Alpha bot.`);
+        repondre(`Download successful for your ${type.toLowerCase()} using Beltah bot.`);
       } else {
         repondre('Failed to download the media. Please try again later.');
       }
