@@ -38,32 +38,21 @@ const date = moment().format('DD/MM/YYYY');
 ├━━━━━━━━━━━━━━━━┈─⋆
 │┠─═[ 𝗠𝗔𝗜𝗡 ]
 │╭───────────────···
-┴│▸*Bot Mode* : 【${mode} mode】
+┴│▸ *Bot Mode* : 【${mode} mode】
 ⬡│▸ *Owner* : ${s.OWNER_NAME}
 ⬡│▸ *Prefix* : [${s.PREFIXE}]
 ⬡│▸ *Plugins* : [ 245 ] 
 ⬡│▸ *Time* :  ${temps}
 ⬡│▸ *Today* : [ ${date} ]
 ⬡│▸ *Time Zone* : [ Africa/Nairobi ] 
-┬╰────────────────···
-├━━━━━━━━━━━━━━━━┈─⋆
-│┠─═[ 𝗦𝗧𝗢𝗥𝗔𝗚𝗘 ]
-│╭───────────────···
 ┴│▸ *Used Ram* : ${format(os.totalmem() - os.freemem())}
-⬡│▸  *Total Ram* :${format(os.totalmem())}0
+⬡│▸  *Total Ram* :${format(os.totalmem())}
 ┬╰────────────────···
 ├━━━━━━━━━━━━━━━━┈─⋆
 `;
-let menuMsg =  `
-│ ┠─═[ 𝗖𝗢𝗡𝗧 ] 
+let menuMsg =  `│┠─═[ 𝗖𝗢𝗡𝗧 ] 
 │╭───────────────···
 ┴│▸ *Bot-User* : *${nomAuteurMessage}*
-┬╰────────────────···
-├━━━━━━━━━━━━━━━━┈─⋆
-│┠─═[ 𝗕𝗢𝗧 𝗦𝗧𝗔𝗧𝗨𝗦 ]
-│╭───────────────···
-┴│▸ *Platform* : Chrome Linux
-⬡│▸  *Status* : Best Wa.Bot
 ┬╰────────────────···
 ├━━━━━━━━━━━━━━━━┈─⋆
 │┠─═[ *SUPPORT LINKS* ]
