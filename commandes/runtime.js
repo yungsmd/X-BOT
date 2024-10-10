@@ -59,7 +59,7 @@ await zk.sendMessage(dest, { video: { url: 'https://telegra.ph/file/4bbcfdf0a62d
 }
 );*/
 
-zokou({ nomCom: 'runtime',
+zokou({ nomCom: 'uptime',
     desc: 'To check runtime',    
     Categorie: 'General',
     reaction: '⏲️', 
@@ -70,7 +70,26 @@ zokou({ nomCom: 'runtime',
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre } = commandeOptions;
 
-                 await repondre(`*_Runtime of SCENE-MD is: ${runtime(process.uptime())}_*`) 
+                 await repondre(`*_Uptime of SCENE-MD is: ${runtime(process.uptime())}_*`) 
+
+   
+
+
+  }
+);
+
+zokou({ nomCom: 'bot',
+    desc: 'To check runtime',    
+    Categorie: 'General',
+    reaction: '⏲️', 
+    fromMe: 'true', 
+
+
+  },
+  async (dest, zk, commandeOptions) => {
+    const { ms, arg, repondre } = commandeOptions;
+
+                 await repondre(`*_Bot has been Running for : ${runtime(process.uptime())}_*`) 
 
    
 
