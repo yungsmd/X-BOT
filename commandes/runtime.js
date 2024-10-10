@@ -22,7 +22,7 @@ const runtime = function (seconds) {
 let timestamp = speed();
 
 zokou({
-    nomCom: 'ping',
+    nomCom: 'speed',
     desc: 'To check ping',
     Categorie: 'General',
     reaction: '⚙️',
