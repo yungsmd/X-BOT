@@ -45,14 +45,12 @@ const date = moment().format('DD/MM/YYYY');
 ⬡│▸ *Time* :  ${temps}
 ⬡│▸ *Today* : [ ${date} ]
 `;
-let menuMsg =  `⬡│▸ *Bot User* *${nomAuteurMessage}*
+let menuMsg =  `⬡│▸ *👋 Hello* : *${nomAuteurMessage}*
 ⬡│▸ *Time Zone* : [ Africa/Nairobi ] 
 ┬╰────────────────···
 ├━━━━━━━━━━━━━━━━┈─⋆
 │┠─═[ *SUPPORT LINKS* ]
-┬╭───────────────···
-⬡ *FOLLOW OUR CHANNEL*
-│▸ whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F
+┴╭───────────────···
 ⬡ *JOIN OUR GROUP*
 │▸ chat.whatsapp.com/CQvUnqaDK4fBjgMXvFEAsI
 ⬡ *TELEGRAM LINK*
