@@ -1,4 +1,4 @@
-const { king } = require('../france/king');
+const { zokou } = require('../framework/zokou');
 
 // List of countries with their capital cities
 const capitalGame = [
@@ -199,7 +199,7 @@ const capitalGame = [
   { country: 'Zimbabwe', capital: 'Harare' }
 ];
 
-king({ nomCom: "guesscapital", categorie: "Games" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "guesscapital", categorie: "Games" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, prefixe } = commandeOptions;
 
   // Choose a random country
