@@ -1,4 +1,4 @@
-const { king } = require('../france/king');
+const { zokou } = require('../framework/zokou');
 
 // List of countries with their flag emojis
 const flagGame = [
@@ -199,7 +199,7 @@ const flagGame = [
   { country: 'Zimbabwe', flag: '🇿🇼' }
 ];
 
-king({ nomCom: "guessflag", categorie: "Games" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "guessflag", categorie: "Games" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, prefixe } = commandeOptions;
 
   // Choose a random country
