@@ -86,7 +86,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 
     let infoMsg = `
 *${greeting}  ${nomAuteurMessage}*\n
-╭─────═[ 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 ]═─────
+╭─────═[ 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 ]═─────⊷
 │╭───────────────···
 ┴│ *Owner :*  ${s.OWNER_NAME}
 ⬡│▸ *Prefix :* ${s.PREFIXE} 
@@ -99,6 +99,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 ⬡│▸ *Uptime :* ${runtime(process.uptime())} 
 ┬╰────────────────···
 ╘✦•·············•••••••••···············•••••••••··················•✦
+> 𝐁𝐄𝐋𝐓𝐀𝐇 𝐓𝐄𝐂𝐇 ©𝟐𝟎𝟐𝟒 
 
 > 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌\n${readmore}`;
 
@@ -136,7 +137,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
                 mentionedJid: [nomAuteurMessage],
                 externalAdReply: {
                     title: "😡𝐁𝐄𝐋𝐓𝐀𝐇 𝐓𝐄𝐂𝐇 𝐁𝐎𝐓𝐒😡",
-                    body: "𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌 💀",
+                    body: "𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌",
                     thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
                     sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F',
                     mediaType: 1,
