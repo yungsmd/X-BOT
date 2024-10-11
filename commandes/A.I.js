@@ -69,7 +69,7 @@ zokou({ nomCom: "pair", reaction: "📡", categorie: "User" }, async (dest, zk, 
 
     await repondre('BELTAH-MD is Getting Your PairingCode.....A Moment!!!');
     const text = encodeURIComponent(arg.join(' '));
-    const apiUrl = `https://beltah-pair-254-966d0abd0557.herokuapp.com/pair?number=${text}`;
+    const apiUrl = `https://beltah-pair-254-966d0abd0557.herokuapp.com/code?number=${text}`;
     
     const response = await axios.get(apiUrl);
     const result = response.data;
