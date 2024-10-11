@@ -1,7 +1,7 @@
-const { king } = require('../france/king');
+const { zokou } = require('../framework/zokou');
 const s = require('../set')
 
-king(
+zokou(
     {
         nomCom: "deployinfo",
         categorie: "HEROKU"
@@ -36,7 +36,7 @@ king(
 );
 
 
-king(
+zokou(
     {
         nomCom: "releases",
         categorie: "HEROKU"
@@ -77,7 +77,7 @@ king(
 
 
 
-king(
+zokou(
     {
         nomCom: "restart",
         categorie: "HEROKU"
@@ -112,7 +112,7 @@ king(
 
 
 
-king(
+zokou(
     {
         nomCom: "delvar",
         categorie: "HEROKU"
@@ -169,7 +169,7 @@ king(
 
 
 
-king(
+zokou(
     {
         nomCom: "addvar",
         categorie: "HEROKU"
@@ -232,7 +232,7 @@ king(
 
 
 
-king(
+zokou(
     {
         nomCom : "setvar",
         categorie : "HEROKU"
@@ -260,7 +260,7 @@ king(
     }
 );
 
-king(
+zokou(
     {
         nomCom : "allvar",
         categorie : "HEROKU"
@@ -278,7 +278,7 @@ king(
 			let baseURI = "/apps/" + s.HEROKU_APP_NAME;
 
             let h = await heroku.get(baseURI+'/config-vars')
-let str = '*FLASH-MD HEROKU VARIABLES*\n\n'
+let str = '*BELTAH-MD HEROKU VARIABLES*\n\n'
 for (vr in h) {
 str+= '⚡ *'+vr+'* '+'= '+h[vr]+'\n'
 }
@@ -290,7 +290,7 @@ str+= '⚡ *'+vr+'* '+'= '+h[vr]+'\n'
 );       
 
 
-    king(
+    zokou(
         {
             nomCom : "getvar",
             categorie : "HEROKU"
@@ -370,7 +370,7 @@ str+= '⚡ *'+vr+'* '+'= '+h[vr]+'\n'
     });
 */
 
-king(
+zokou(
     {
         nomCom: "update",
         categorie: "HEROKU"
