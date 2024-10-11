@@ -1,4 +1,4 @@
-const { king } = require("../france/king");
+const { zokou } = require("../framework/zokou");
 const yts = require('yt-search');
 const BaseUrl = 'https://gifted-apis-third-30b2fdbb9819.herokuapp.com';
 const giftedapikey = 'gifteddevskk';
@@ -65,7 +65,7 @@ king({
 
 */
 
-king({
+zokou({
   nomCom: "play",
   categorie: "Search",
   reaction: "💿"
@@ -98,7 +98,7 @@ king({
         // Prepare the message with song details
         const infoMess = {
           image: { url: videos[0].thumbnail },
-          caption: `*FLASH-MD SONG PLAYER*\n
+          caption: `*SCENE-MD SONG PLAYER*\n
 ╭───────────────◆
 │⿻ *Title:* ${apiResult.result.title}
 │⿻ *Quality:* ${apiResult.result.type}
@@ -110,7 +110,7 @@ king({
 ⦿ *Direct YtLink:* ${videoUrl}
 
 ╭────────────────◆
-│ *_Powered by ©France King._*
+│𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌
 ╰─────────────────◆`
         };
 
@@ -123,9 +123,9 @@ king({
           mimetype: 'audio/mp4'
         }, { quoted: ms });
 
-        repondre('Download Success...');
+        repondre('Download Successfully ✅.');
       } else {
-        repondre('Failed to download audio. Please try again later.');
+        repondre('❌ Failed to download audio. Please try again later.');
       }
     } else {
       repondre('No audio found.');
@@ -282,7 +282,7 @@ king({
   }
 });
 */
-king({
+zokou({
   nomCom: "videodoc",
   categorie: "Search",
   reaction: "🎥"
@@ -315,19 +315,19 @@ king({
         // Prepare the message with video details
         const infoMess = {
           image: { url: videos[0].thumbnail },
-          caption: `*FLASH-MD VIDEO PLAYER*\n
+          caption: `*SCENE-MD VIDEO PLAYER*\n
 ╭───────────────◆
-│⿻ *Title:* ${apiResult.result.title}
-│⿻ *Quality:* ${apiResult.result.type}
-│⿻ *Duration:* ${videos[0].timestamp}
-│⿻ *Viewers:* ${videos[0].views}
-│⿻ *Uploaded:* ${videos[0].ago}
-│⿻ *Artist:* ${videos[0].author.name}
+│ *Title:* ${apiResult.result.title}
+│ *Quality:* ${apiResult.result.type}
+│ *Duration:* ${videos[0].timestamp}
+│ *Viewers:* ${videos[0].views}
+│ *Uploaded:* ${videos[0].ago}
+│ *Artist:* ${videos[0].author.name}
 ╰────────────────◆
 ⦿ *Direct YtLink:* ${videoUrl}
 
 ╭────────────────◆
-│ *_Powered by ©France King._*
+│𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌
 ╰─────────────────◆`
         };
 
@@ -340,9 +340,9 @@ king({
           mimetype: 'video/mp4'
         }, { quoted: ms });
 
-        repondre('Download Success...');
+        repondre('Downloaded Successfully✅.');
       } else {
-        repondre('Failed to download the video. Please try again later.');
+        repondre('❌ Failed to download the video. Please try again later.');
       }
     } else {
       repondre('No videos found.');
@@ -564,7 +564,7 @@ king({
   }
 });*/
 
-king({
+zokou({
   nomCom: "video",
   categorie: "Search",
   reaction: "🎥"
@@ -598,18 +598,18 @@ king({
         // Prepare the message with video details
         const infoMess = {
           image: { url: videos[0].thumbnail },
-          caption: `*FLASH-MD VIDEO PLAYER*\n
+          caption: `*SCENE-MD VIDEO PLAYER*\n
 ╭───────────────◆
-│⿻ *Title:* ${videoData.title}
-│⿻ *Duration:* ${videoData.duration}
-│⿻ *Viewers:* ${videoData.views}
-│⿻ *Uploaded:* ${videoData.upload}
-│⿻ *Artist:* ${videoData.channel}
+│ *Title:* ${videoData.title}
+│ *Duration:* ${videoData.duration}
+│ *Viewers:* ${videoData.views}
+│ *Uploaded:* ${videoData.upload}
+│ *Artist:* ${videoData.channel}
 ╰────────────────◆
 ⦿ *Direct YtLink:* ${videoUrl}
 
 ╭────────────────◆
-│ *_Powered by ©France King._*
+│𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌
 ╰─────────────────◆`
         };
 
@@ -622,9 +622,9 @@ king({
           mimetype: 'video/mp4'
         }, { quoted: ms });
 
-        repondre('Download Success...');
+        repondre('Downloaded Successfully ✅.');
       } else {
-        repondre('Failed to download the video. Please try again later.');
+        repondre('❌ Failed to download the video. Please try again later.');
       }
     } else {
       repondre('No videos found.');
@@ -636,7 +636,7 @@ king({
 });
 
 
-king({
+zokou({
   nomCom: "song",
   categorie: "Search",
   reaction: "🎥"
@@ -671,18 +671,18 @@ king({
         // Prepare the message with video details
         const infoMess = {
           image: { url: videos[0].thumbnail },
-          caption: `*FLASH-MD SONG PLAYER*\n
+          caption: `*SCENE-MD SONG PLAYER*\n
 ╭───────────────◆
-│⿻ *Title:* ${videoData.title}
-│⿻ *Duration:* ${videoData.duration}
-│⿻ *Viewers:* ${videoData.views}
-│⿻ *Uploaded:* ${videoData.upload}
-│⿻ *Artist:* ${videoData.channel}
+│ *Title:* ${videoData.title}
+│ *Duration:* ${videoData.duration}
+│ *Viewers:* ${videoData.views}
+│ *Uploaded:* ${videoData.upload}
+│ *Artist:* ${videoData.channel}
 ╰────────────────◆
 ⦿ *Direct YtLink:* ${videoUrl}
 
 ╭────────────────◆
-│ *_Powered by ©France King._*
+│𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌
 ╰─────────────────◆`
         };
 
@@ -695,9 +695,9 @@ king({
           mimetype: 'audio/mpeg'
         }, { quoted: ms });
 
-        repondre('Download Success...');
+        repondre('Downloaded Successfully ✅.');
       } else {
-        repondre('Failed to download the video. Please try again later.');
+        repondre('❌ Failed to download the video. Please try again later.');
       }
     } else {
       repondre('No videos found.');
