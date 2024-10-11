@@ -1,16 +1,16 @@
 //"use strict";
 //const fetch = require('node-fetch');
-const { king } = require('../france/king');
+const { zokou } = require('../framework/zokou');
 
 // Register the command with its aliases
-king({
+zokou({
     nomCom: "repo",
     aliases: ["sc", "script"], // Adding aliases
-    reaction: "🤍",
+    reaction: "😡",
     nomFichier: __filename
 }, async (dest, zk, commandeOptions) => {
-    const githubRepo = 'https://api.github.com/repos/franceking1/Flash-Md';
-    const img = 'https://telegra.ph/file/73d05b8d0ae57de7b564a.jpg';
+    const githubRepo = 'https://api.github.com/repos/Beltahtech/SCENE-MD3';
+    const img = 'https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg';
     const { repondre, auteurMessage } = commandeOptions;
 
     try {
@@ -28,24 +28,24 @@ king({
             const releaseDate = new Date(data.created_at).toLocaleDateString('en-GB');
             //const updateDate = new Date(data.updated_at).toLocaleDateString('en-GB');
 
-            const gitdata = `*HEY 👋 THIS IS FLASH-MD.*\n\nI'm A WhatsApp bot created by *©France King*.\n
+            const gitdata = `*👋 HELLO ,THIS IS SCENE-MD.*\n\nI'm A Multidevice WhatsApp User Bot created by *Beltah Tech 254 🇰🇪*.\n
 [✨] *STARS:* - ${repoInfo.stars}
 [🧧] *FORKS:* - ${repoInfo.forks}
 [📅] *RELEASE DATE:* - ${releaseDate}
 [🗼] *REPO:* - ${data.html_url}
-[👨‍💻] *OWNER:* - *France King* 
+[👨‍💻] *OWNER:* - *Beltah Tech 254 🇰🇪* 
 __________________________________
-             *Made With* 🤍`;
+> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌`;
 
             await zk.sendMessage(dest, { 
                 text: gitdata,
                 contextInfo: {
                     mentionedJid: [auteurMessage],
                     externalAdReply: {
-                        title: "THE FLASH MULTI DEVICE",
-                        body: "POWERED BY FRANCE KING",
-                        thumbnailUrl: "https://telegra.ph/file/4143dfac775bff078cc5a.jpg",
-                        sourceUrl: 'https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P',
+                        title: "😡𝐁𝐄𝐋𝐓𝐀𝐇 𝐓𝐄𝐂𝐇 𝐁𝐎𝐓𝐒😡",
+                        body: "𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌",
+                        thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
+                        sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F',
                         mediaType: 1,
                         renderLargerThumbnail: true
                     }
