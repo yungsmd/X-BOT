@@ -1,10 +1,10 @@
-const { king } = require('../france/king');
-const traduire = require("../france/traduction") ;
+const { zokou } = require('../framework/zokou');
+const traduire = require("../framework/traduction") ;
 const { default: axios } = require('axios');
 const pkg = require('@whiskeysockets/baileys');
 const { generateWAMessageFromContent, proto } = pkg;
 
-king({
+zokou({
   nomCom: "number",
   aliases: ["checknum", "validate", "numinfo", "valid"], // Adding aliases
   reaction: "📞",
@@ -40,7 +40,7 @@ king({
 });
  
 
-king({ nomCom: "technews", reaction: "📰", categorie: "News" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "technews", reaction: "📰", categorie: "News" }, async (dest, zk, commandeOptions) => {
   const { repondre, ms } = commandeOptions;
 
   try {
@@ -49,7 +49,7 @@ king({ nomCom: "technews", reaction: "📰", categorie: "News" }, async (dest, z
 
     const { thumbnail, news } = data;
 
-    const message = `*FLASH-MD TECH NEWS*\n\n${news}\n\n*Powered by © France King*`;
+    const message = `*BELTAH-MD TECH NEWS*\n\n${news}\n\n*Powered by © Beltah Tech*`;
 
     await zk.sendMessage(dest, { image: { url: thumbnail }, caption: message }, { quoted: ms });
   } catch (error) {
@@ -59,7 +59,7 @@ king({ nomCom: "technews", reaction: "📰", categorie: "News" }, async (dest, z
 });
 
 
-king({ nomCom: "pair", reaction: "📡", categorie: "User" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "pair", reaction: "📡", categorie: "User" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
@@ -67,7 +67,7 @@ king({ nomCom: "pair", reaction: "📡", categorie: "User" }, async (dest, zk, c
       return repondre('Example Usage: .pair 2541111xxxxx.');
     }
 
-    await repondre('Flash-Md is Getting Your PairingCode.....A Moment!!!');
+    await repondre('BELTAH-MD is Getting Your PairingCode.....A Moment!!!');
     const text = encodeURIComponent(arg.join(' '));
     const apiUrl = `https://the-flash-md-sessions.onrender.com/code?number=${text}`;
     
@@ -76,7 +76,7 @@ king({ nomCom: "pair", reaction: "📡", categorie: "User" }, async (dest, zk, c
 
     if (result && result.code) {
       const getsess = result.code;
-      const answer = `Your Flash-Md PairingCode is: *${getsess}*\nUse it to Link Your WhatsApp Within 1 Minute Before it Expires\nHappy Bot Deployment!!!`;
+      const answer = `Your BELTAH-MD PairingCode is: *${getsess}*\nUse it to Link Your WhatsApp Within 1 Minute Before it Expires\nHappy Bot Deployment!!!`;
       
       const buttons = [
         {
@@ -90,8 +90,8 @@ king({ nomCom: "pair", reaction: "📡", categorie: "User" }, async (dest, zk, c
         {
           name: "cta_url",
           buttonParamsJson: JSON.stringify({
-            display_text: "FOLLOW 🤍 CHANNEL",
-            url: `https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P`
+            display_text: "FOLLOW OUR CHANNEL",
+            url: `https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F`
           })
         }
       ];
@@ -108,7 +108,7 @@ king({ nomCom: "pair", reaction: "📡", categorie: "User" }, async (dest, zk, c
                 text: answer
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "> *POWERED BY FLASH-MD*"
+                text: "> *POWERED BY BELTAH-MD*"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 title: "",
@@ -249,7 +249,7 @@ king({ nomCom: "gpt4", reaction: "📡", categorie: "AI" }, async (dest, zk, com
   }
 });
 */
-king({
+zokou({
   nomCom: "mail",
   aliases: ["tempmail", "temp"], // Adding aliases
   reaction: "📧",
@@ -314,12 +314,12 @@ king({
 
 
 
-king({nomCom:"flash",reaction:"📡",categorie:"AI"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"beltah",reaction:"📡",categorie:"AI"},async(dest,zk,commandeOptions)=>{
 
   const {repondre,ms,arg}=commandeOptions;
   
     if(!arg || !arg[0])
-    {return repondre("YEES!\n _I'm listening to you._")}
+    {return repondre("YEES!\n _I'm listening to you.Ask me anything...😌_")}
     //var quest = arg.join(' ');
   try{
     
@@ -336,7 +336,7 @@ repondre('something went wrong...')
   
   });  
 
-king({
+zokou({
   nomCom: "dalle",
   aliases: ["dall", "dal"], // Adding aliases
   reaction: "📡",
@@ -353,7 +353,7 @@ king({
     const image = arg.join(' ');
     const data = `https://widipe.com/dalle?text=${image}`;
     
-    let caption = '*Powered by FLASH-MD*';
+    let caption = '*Powered by BELTAH-MD*';
    
     zk.sendMessage(dest, { image: { url: data }, caption: caption }, { quoted: ms });
 
@@ -365,7 +365,7 @@ king({
  
 
   
-king({ nomCom: "gpt", reaction: "📡", categorie: "AI" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gpt", reaction: "📡", categorie: "AI" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
@@ -387,8 +387,8 @@ king({ nomCom: "gpt", reaction: "📡", categorie: "AI" }, async (dest, zk, comm
         {
           name: "cta_url",
           buttonParamsJson: JSON.stringify({
-            display_text: "FOLLOW 🤍 CHANNEL",
-            url: `https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P`
+            display_text: "FOLLOW OUR CHANNEL",
+            url: `https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F`
           })
         }
       ];
@@ -417,7 +417,7 @@ king({ nomCom: "gpt", reaction: "📡", categorie: "AI" }, async (dest, zk, comm
                   text: answer
                 }),
                 footer: proto.Message.InteractiveMessage.Footer.create({
-                  text: "> *POWERED BY FLASH-MD*"
+                  text: "> *POWERED BY BELTAH-MD*"
                 }),
                 header: proto.Message.InteractiveMessage.Header.create({
                   title: "",
@@ -449,7 +449,7 @@ king({ nomCom: "gpt", reaction: "📡", categorie: "AI" }, async (dest, zk, comm
                   text: answer
                 }),
                 footer: proto.Message.InteractiveMessage.Footer.create({
-                  text: "> *POWERED BY FLASH-MD*"
+                  text: "> *POWERED BY BELTAH-MD*"
                 }),
                 header: proto.Message.InteractiveMessage.Header.create({
                   title: "",
@@ -478,12 +478,12 @@ king({ nomCom: "gpt", reaction: "📡", categorie: "AI" }, async (dest, zk, comm
 });
 
 
-king({ nomCom: "gemini", reaction: "🤗", categorie: "AI" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gemini", reaction: "🤗", categorie: "AI" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
     if (!arg || arg.length === 0) {
-      return repondre('Hello am *FLASH-MD.* an AI developed by France King.\n\n What help can I offer you today?');
+      return repondre('Hello am *BELTAH-MD.* an AI developed by Beltah Tech.\n\n What help can I offer you today?');
     }
 
     // Combine arguments into a single string
@@ -500,8 +500,8 @@ king({ nomCom: "gemini", reaction: "🤗", categorie: "AI" }, async (dest, zk, c
         {
           name: "cta_url",
           buttonParamsJson: JSON.stringify({
-            display_text: "FOLLOW 🤍 CHANNEL",
-            url: `https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P`
+            display_text: "FOLLOW OUR CHANNEL",
+            url: `https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F`
           })
         }
       ];
@@ -530,7 +530,7 @@ king({ nomCom: "gemini", reaction: "🤗", categorie: "AI" }, async (dest, zk, c
                   text: answer
                 }),
                 footer: proto.Message.InteractiveMessage.Footer.create({
-                  text: "> *POWERED BY FLASH-MD*"
+                  text: "> *POWERED BY BELTAH-MD*"
                 }),
                 header: proto.Message.InteractiveMessage.Header.create({
                   title: "",
@@ -562,7 +562,7 @@ king({ nomCom: "gemini", reaction: "🤗", categorie: "AI" }, async (dest, zk, c
                   text: answer
                 }),
                 footer: proto.Message.InteractiveMessage.Footer.create({
-                  text: "> *POWERED BY FLASH-MD*"
+                  text: "> *POWERED BY BELTAH-MD*"
                 }),
                 header: proto.Message.InteractiveMessage.Header.create({
                   title: "",
@@ -590,7 +590,7 @@ king({ nomCom: "gemini", reaction: "🤗", categorie: "AI" }, async (dest, zk, c
   }
 });
 
-king({
+zokou({
   nomCom: "calc",
   aliases: ["cal", "calculate"], // Adding aliases
   reaction: "🔢",
@@ -640,11 +640,11 @@ king({ nomCom: "gpt4", reaction: "📡", categorie: "AI" }, async (dest, zk, com
 */
 
 
-king({
+zokou({
   nomCom: "best-wallp",
   aliases: ["bestwal", "best", "bw"], // Adding aliases
   reaction: "🙌",
-  categorie: "FLASH PICS"
+  categorie: "BELTAH PICS"
 }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
@@ -654,7 +654,7 @@ king({
 
   let buttonMessaged = {
     image: { url: url },
-    caption: `*POWERED BY FLASH-MD*`,
+    caption: `*POWERED BY BELTAH-MD*`,
   };
   
   return await zk.sendMessage(dest, buttonMessaged, { quoted: ms });
@@ -663,7 +663,7 @@ king({
 
 
 
-king({ nomCom: "random", reaction: "🥂", categorie: "FLASH PICS" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "random", reaction: "🥂", categorie: "BELTAH PICS" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
   const response = await fetch('https://api.unsplash.com/photos/random?client_id=72utkjatCBC-PDcx7-Kcvgod7-QOFAm2fXwEeW8b8cc');
 const data = await response.json();
@@ -672,7 +672,7 @@ const data = await response.json();
 
                 let buttonMessaged = {
                     image: { url: url },
-                    caption: `*POWERED BY FLASH-MD*`,
+                    caption: `*POWERED BY BELTAH-MD*`,
                     
                    
                 };
@@ -682,7 +682,7 @@ const data = await response.json();
 }
    );
 
-king({ nomCom: "nature", reaction: "🦗", categorie: "FLASH PICS" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "nature", reaction: "🦗", categorie: "BELTAH PICS" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
   const response = await fetch('https://api.unsplash.com/photos/random?client_id=72utkjatCBC-PDcx7-Kcvgod7-QOFAm2fXwEeW8b8cc');
 const data = await response.json();
@@ -691,7 +691,7 @@ const data = await response.json();
 
                 let buttonMessaged = {
                     image: { url: url },
-                    caption: `*POWERED BY FLASH-MD*`,
+                    caption: `*POWERED BY BELTAH-MD*`,
                     
                    
                 };
@@ -702,7 +702,7 @@ const data = await response.json();
    );
 
 
-king({
+zokou({
   nomCom: "time",
   aliases: ["now", "live", "moment"], // Adding aliases
   reaction: "⌚",
@@ -722,7 +722,7 @@ king({
     const timeB = data.result[0].time;
     const timeC = data.result[0].timeZone;
 
-    await repondre(`Live Time in *${timeA}* Stats:\n\n*Date & Time:* ${timeB}\n*TimeZone:* ${timeC}\n\n> *POWERED BY FLASH-MD*`);
+    await repondre(`Live Time in *${timeA}* Stats:\n\n*Date & Time:* ${timeB}\n*TimeZone:* ${timeC}\n\n> *POWERED BY BELTAH-MD*`);
   } catch (e) {
     repondre("That country name is incorrect!");
   }
@@ -730,7 +730,7 @@ king({
  
 
 
-  king({ nomCom: "lines", reaction: "🫵", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
+  zokou({ nomCom: "lines", reaction: "🫵", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
  
      const response = await fetch(`https://api.maher-zubair.tech/misc/lines`);
@@ -744,7 +744,7 @@ console.log(data.completion);
 
 
 
-king({ nomCom: "insult", reaction: "💀", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "insult", reaction: "💀", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
  
      const response = await fetch(`https://api.maher-zubair.tech/misc/insult`);
@@ -768,7 +768,7 @@ king({ nomCom: "enhance", reaction: "💥", categorie: "User" }, async (dest, zk
       const data = `https://api.maher-zubair.tech/maker/enhance?url=${url}`;
       
     
-      let caption = '*Enhanced by FLASH-MD*';
+      let caption = '*Enhanced by BELTAH-MD*';
      
      
         zk.sendMessage(dest, { image: { url: data }, caption: caption }, { quoted: ms });
@@ -779,7 +779,7 @@ king({ nomCom: "enhance", reaction: "💥", categorie: "User" }, async (dest, zk
     }
   });
 
-king({ nomCom: "dare", reaction: "😁", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "dare", reaction: "😁", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
  
      const response = await fetch(`https://shizoapi.onrender.com/api/texts/dare?apikey=shizo`);
@@ -792,7 +792,7 @@ console.log(data.completion);
 
 
 
-king({ nomCom: "truth", reaction: "🤩", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "truth", reaction: "🤩", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
     const { repondre, arg, ms } = commandeOptions;
  
      const response = await fetch(`https://shizoapi.onrender.com/api/texts/truth?apikey=shizo`);
@@ -803,7 +803,7 @@ console.log(data.completion);
 
   });
 
-king({
+zokou({
   nomCom: "applenews",
   reaction: "🗞️",
   categorie: "NEWS"
@@ -818,11 +818,11 @@ king({
       const newsData = result.result;
 
       const formattedResult = `
-*FLASH-MD APPLE NEWS:*\n\n
+*BELTAH-MD APPLE NEWS:*\n\n
 - *Title:* ${newsData.title}\n
 - *Description:* ${newsData.desc.split('\n')[0]}...
 - *Read More:* ${newsData.link}
-\n\n> Powered by *©France King*`;
+\n\n> Powered by *©Beltah Tech 254 🇰🇪*`;
 
       const imageUrl = newsData.images.find(img => img && img !== "https://images.macrumors.com/images-new/1x1.trans.gif");
 
@@ -900,7 +900,7 @@ king({
   }
 });
 */
-king({
+zokou({
   nomCom: "nasanews",
   reaction: "🗞️",
   categorie: "NEWS"
@@ -915,11 +915,11 @@ king({
       const newsData = result.result;
 
       const formattedResult = `
-*FLASH-MD NASA NEWS:*\n\n
+*BELTAH-MD NASA NEWS:*\n\n
 - *Title:* ${newsData.title}\n
 - *Date:* ${newsData.date}\n
 - *Description:* ${newsData.explanation.split('\n')[0]}...
-\n\n> Powered by *©France King*`;
+\n\n> Powered by *©Beltah Tech 254 🇰🇪*`;
 
       const imageUrl = newsData.url; // Assuming the key for the image URL is urlToImage
 
@@ -948,7 +948,7 @@ king({
   }
 });
 
-king({
+zokou({
   nomCom: "population",
   reaction: "🗞️",
   categorie: "NEWS"
@@ -970,7 +970,7 @@ king({
 - *Deaths This Year:* ${populationData.this_year.deaths}
 - *Births Today:* ${populationData.today.births}
 - *Deaths Today:* ${populationData.today.deaths}
-\n\n> *Powered by ©FLASH-MD*`;
+\n\n> *Powered by ©BELTAH-MD*`;
 
       await repondre(pop);
     } else {
@@ -1101,7 +1101,7 @@ king({
 
 
 */
-king({ 
+zokou({ 
   nomCom: "jokes", 
   reaction: "🤩", 
   categorie: "Fun" 
@@ -1129,7 +1129,7 @@ king({
   }
 });
 
-king({ nomCom: "advice", reaction: "🗨️", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "advice", reaction: "🗨️", categorie: "Fun" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
@@ -1143,7 +1143,7 @@ king({ nomCom: "advice", reaction: "🗨️", categorie: "Fun" }, async (dest, z
   }
 });
 
-king({
+zokou({
   nomCom: "trivia",
   reaction: "🤔",
   categorie: "Fun"
@@ -1183,7 +1183,7 @@ king({
 });
 
 
-king({ nomCom: "inspire", reaction: "✨", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "inspire", reaction: "✨", categorie: "General" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
@@ -1198,7 +1198,7 @@ king({ nomCom: "inspire", reaction: "✨", categorie: "General" }, async (dest, 
   }
 });
 
-king({ nomCom: "gpt4", reaction: "📡", categorie: "AI" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gpt4", reaction: "📡", categorie: "AI" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
@@ -1220,8 +1220,8 @@ king({ nomCom: "gpt4", reaction: "📡", categorie: "AI" }, async (dest, zk, com
         {
           name: "cta_url",
           buttonParamsJson: JSON.stringify({
-            display_text: "FOLLOW 🤍 CHANNEL",
-            url: `https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P`
+            display_text: "FOLLOW OUR CHANNEL",
+            url: `https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F`
           })
         }
       ];
@@ -1251,7 +1251,7 @@ king({ nomCom: "gpt4", reaction: "📡", categorie: "AI" }, async (dest, zk, com
                 text: answer
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "> *POWERED BY FLASH-MD*"
+                text: "> *POWERED BY BELTAH-MD*"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 title: "",
@@ -1326,12 +1326,12 @@ king({ nomCom: "media", reaction: "📡", categorie: "AI" }, async (dest, zk, co
 });*/
 
 
-king({ nomCom: "bard", aliases: ["gptbard"], categorie: "AI" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "bard", aliases: ["gptbard"], categorie: "AI" }, async (dest, zk, commandeOptions) => {
     const { ms, repondre, arg } = commandeOptions;
 
     // Ensure that there is an argument provided
     if (!arg[0]) {
-        repondre("Please provide a query for Bard. Example: `bard What is the capital of France?`");
+        repondre("Please provide a query for Bard. Example: `bard What is the capital of Kenya?`");
         return;
     }
 
@@ -1360,8 +1360,8 @@ king({ nomCom: "bard", aliases: ["gptbard"], categorie: "AI" }, async (dest, zk,
             {
                 name: "cta_url",
                 buttonParamsJson: JSON.stringify({
-                    display_text: "FOLLOW 🤍 CHANNEL",
-                    url: "https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P"
+                    display_text: "FOLLOW OUR CHANNEL",
+                    url: "https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F"
                 })
             }
         ];
@@ -1378,7 +1378,7 @@ king({ nomCom: "bard", aliases: ["gptbard"], categorie: "AI" }, async (dest, zk,
                             text: bardMessage
                         }),
                         footer: proto.Message.InteractiveMessage.Footer.create({
-                            text: "> *POWERED BY FLASH-MD*"
+                            text: "> *POWERED BY BELTAH-MD*"
                         }),
                         header: proto.Message.InteractiveMessage.Header.create({
                             title: "",
