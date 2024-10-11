@@ -61,7 +61,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     });
 
     // Set the default timezone from the configuration
-    moment.tz.setDefault(s.TZ);
+    moment.tz.setDefault('Africa/Nairobi');
 
     // Create a date and time in the configured timezone
     const temps = moment().format('HH:mm:ss');
