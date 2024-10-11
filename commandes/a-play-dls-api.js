@@ -1,709 +1,166 @@
-const { zokou } = require("../framework/zokou");
-const yts = require('yt-search');
-const BaseUrl = 'https://gifted-apis-third-30b2fdbb9819.herokuapp.com';
-const giftedapikey = 'gifteddevskk';
-/*const { ytdown } = require("nayan-media-downloader");
-
-//Nkkkttt
-king({
-  nomCom: "sing",
-  categorie: "Search",
-  reaction: "💿"
-}, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("Please insert a song name.");
-    return;
-  }
-
-  try {
-    const songName = arg.join(" ");
-    const search = await yts(songName);
-    const video = search.videos[0];
-
-    if (video) {
-      const videoUrl = video.url;
-      const response = await ytdown(videoUrl);
-
-      if (response && response.status && response.data) {
-        const { title, author, published, picture, video: videoDownloadUrl } = response.data;
-        const infoMess = {
-          image: { url: picture },
-          caption: `*FLASH-MD SONG PLAYER*\n\n╭───────────────◆\n│⿻ *Title:* ${title}\n│⿻ *Author:* ${author}\n│⿻ *Published:* ${published}\n╰────────────────◆\n⦿ *Direct YtLink:* ${videoUrl}\n\n╭────────────────◆\n│ *_Powered by ©France King._*\n╰─────────────────◆`,
-          contextInfo: {
-            externalAdReply: {
-              title: "FLASH-MD SONG PLAYER",
-              body: "Powered by France King",
-              thumbnailUrl: picture,
-              sourceUrl: 'https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P',
-              mediaType: 1,
-              renderLargerThumbnail: true
-            }
-          }
-        };
-
-        await zk.sendMessage(dest, infoMess, { quoted: ms });
-        await zk.sendMessage(dest, {
-          document: { url: videoDownloadUrl },
-          mimetype: 'audio/mpeg',
-          fileName: `${title}.mp3`
-        }, { quoted: ms });
-
-        repondre('Download Success...');
-      } else {
-        repondre('Failed to download audio. Please try again later.');
-      }
-    } else {
-      repondre('No video found for the given song name.');
-    }
-  } catch (error) {
-    console.error('Error from API:', error);
-    repondre('An error occurred while searching or downloading the audio.');
-  }
-});
-
-*/
-
+const {
+  zokou
+} = require('../framework/zokou');
+const yts = require("yt-search");
 zokou({
-  nomCom: "play",
-  categorie: "Search",
-  reaction: "💿"
-}, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("Please insert a song name.");
+  'nomCom': 'video',
+  'categorie': "Search",
+  'reaction': '🎥'
+}, async (_0x5c7f97, _0x37be21, _0x1cc9a8) => {
+  const {
+    ms: _0x367eaa,
+    repondre: _0x27061c,
+    arg: _0x630689
+  } = _0x1cc9a8;
+  if (!_0x630689[0x0]) {
+    _0x27061c("Please insert a song/video name.");
     return;
   }
-
   try {
-    let topo = arg.join(" ");
-    let videos = [];
-
-    // Perform YouTube search
-    const search = await yts(topo);
-    videos = search.videos;
-
-    if (videos && videos.length > 0) {
-      const videoUrl = videos[0].url;
-
-      // Call the API endpoint with the video URL to fetch audio download URL
-      const apiResponse = await fetch(`${BaseUrl}/api/download/ytmp3?url=${encodeURIComponent(videoUrl)}&apikey=${giftedapikey}`);
-      const apiResult = await apiResponse.json();
-
-      if (apiResult.status === 200 && apiResult.success) {
-        const audioDlUrl = apiResult.result.download_url;
-        
-        // Prepare the message with song details
-        const infoMess = {
-          image: { url: videos[0].thumbnail },
-          caption: `*SCENE-MD SONG PLAYER*\n
-╭───────────────◆
-│⿻ *Title:* ${apiResult.result.title}
-│⿻ *Quality:* ${apiResult.result.type}
-│⿻ *Duration:* ${videos[0].timestamp}
-│⿻ *Viewers:* ${videos[0].views}
-│⿻ *Uploaded:* ${videos[0].ago}
-│⿻ *Artist:* ${videos[0].author.name}
-╰────────────────◆
-⦿ *Direct YtLink:* ${videoUrl}
-
-╭────────────────◆
-│𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌
-╰─────────────────◆`
+    let _0x438071 = _0x630689.join(" ");
+    let _0x1b41dd = [];
+    const _0x5410a4 = await yts(_0x438071);
+    _0x1b41dd = _0x5410a4.videos;
+    if (_0x1b41dd && _0x1b41dd.length > 0x0) {
+      const _0x194b74 = _0x1b41dd[0x0].url;
+      const _0x2bc96f = await fetch("https://api-gifted-tech.onrender.com/api/download/ytmp4?url=" + encodeURIComponent(_0x194b74) + "&apikey=" + "ibrahimtech_ai");
+      const _0x22db9b = await _0x2bc96f.json();
+      if (_0x22db9b.status === 0xc8 && _0x22db9b.success) {
+        const _0x24dd16 = _0x22db9b.result.download_url;
+        const _0x581018 = {
+          'image': {
+            'url': _0x1b41dd[0x0].thumbnail
+          },
+          'caption': "🔍 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐒𝐄𝐀𝐑𝐂𝐇 𝐄𝐍𝐆𝐈𝐍𝐄 🔎\n⏳\n⏳⏳\n⏳⏳⏳\n> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌 😡"
         };
-
-        // Send song details
-        await zk.sendMessage(dest, infoMess, { quoted: ms });
-
-        // Send the audio as a Buffer instead of URL
-        await zk.sendMessage(dest, {
-          audio: { url: audioDlUrl },
-          mimetype: 'audio/mp4'
-        }, { quoted: ms });
-
-        repondre('Download Successfully ✅.');
+        await _0x37be21.sendMessage(_0x5c7f97, _0x581018, {
+          'quoted': _0x367eaa
+        });
+        await _0x37be21.sendMessage(_0x5c7f97, {
+          'video': {
+            'url': _0x24dd16
+          },
+          'mimetype': 'video/mp4'
+        }, {
+          'quoted': _0x367eaa
+        });
+        _0x27061c("Downloded Successfully by Beltah Tech 254✅");
       } else {
-        repondre('❌ Failed to download audio. Please try again later.');
+        _0x27061c("Searching...⏳");
       }
     } else {
-      repondre('No audio found.');
+      _0x27061c("No videos found.");
     }
-  } catch (error) {
-    console.error('Error from API:', error);
-    repondre('An error occurred while searching or downloading the audio.');
-  }
-});/*
-
-king({
-  nomCom: "song",
-  categorie: "Search",
-  reaction: "💿"
-}, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("Please insert a song name.");
-    return;
-  }
-
-  try {
-    let topo = arg.join(" ");
-    let videos = [];
-
-    // Perform YouTube search
-    const search = await yts(topo);
-    videos = search.videos;
-
-    if (videos && videos.length > 0) {
-      const videoUrl = videos[0].url;
-
-      // Call the API endpoint with the video URL to fetch audio download URL
-      const apiResponse = await fetch(`${BaseUrl}/api/download/ytmp3?url=${encodeURIComponent(videoUrl)}&apikey=${giftedapikey}`);
-      const apiResult = await apiResponse.json();
-
-      if (apiResult.status === 200 && apiResult.success) {
-        const audioDlUrl = apiResult.result.download_url;
-        
-        // Prepare the message with song details
-        const infoMess = {
-          image: { url: videos[0].thumbnail },
-          caption: `*FLASH-MD SONG PLAYER*\n
-╭───────────────◆
-│⿻ *Title:* ${apiResult.result.title}
-│⿻ *Quality:* ${apiResult.result.type}
-│⿻ *Duration:* ${videos[0].timestamp}
-│⿻ *Viewers:* ${videos[0].views}
-│⿻ *Uploaded:* ${videos[0].ago}
-│⿻ *Artist:* ${videos[0].author.name}
-╰────────────────◆
-⦿ *Direct YtLink:* ${videoUrl}
-
-╭────────────────◆
-│ *_Powered by ©France King._*
-╰─────────────────◆`
-        };
-
-        // Send song details
-        await zk.sendMessage(dest, infoMess, { quoted: ms });
-
-        // Send the audio as a Buffer instead of URL
-        await zk.sendMessage(dest, {
-          document: { url: audioDlUrl },
-          mimetype: 'audio/mpeg'
-        }, { quoted: ms });
-
-        repondre('Download Success...');
-      } else {
-        repondre('Failed to download audio. Please try again later.');
-      }
-    } else {
-      repondre('No audio found.');
-    }
-  } catch (error) {
-    console.error('Error from API:', error);
-    repondre('An error occurred while searching or downloading the audio.');
+  } catch (_0xbb0371) {
+    console.error("Error from API:", _0xbb0371);
+    _0x27061c('Searching...⏳');
   }
 });
-*/
-
-
-
-//Working 
-/*king({
-  nomCom: "video",
-  categorie: "Search",
-  reaction: "🎥"
-}, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("Please insert a song/video name.");
-    return;
-  }
-
-  try {
-    let topo = arg.join(" ");
-    let videos = [];
-
-    // Perform YouTube search
-    const search = await yts(topo);
-    videos = search.videos;
-
-    if (videos && videos.length > 0) {
-      const videoUrl = videos[0].url;
-
-      // Call the API endpoint with the video URL to fetch the video download URL
-      const apiResponse = await fetch(`${BaseUrl}/api/download/ytmp4?url=${encodeURIComponent(videoUrl)}&apikey=${giftedapikey}`);
-      const apiResult = await apiResponse.json();
-
-      if (apiResult.status === 200 && apiResult.success) {
-        const videoDlUrl = apiResult.result.download_url;
-
-        // Prepare the message with video details
-        const infoMess = {
-          image: { url: videos[0].thumbnail },
-          caption: `*FLASH-MD VIDEO PLAYER*\n
-╭───────────────◆
-│⿻ *Title:* ${apiResult.result.title}
-│⿻ *Quality:* ${apiResult.result.type}
-│⿻ *Duration:* ${videos[0].timestamp}
-│⿻ *Viewers:* ${videos[0].views}
-│⿻ *Uploaded:* ${videos[0].ago}
-│⿻ *Artist:* ${videos[0].author.name}
-╰────────────────◆
-⦿ *Direct YtLink:* ${videoUrl}
-
-╭────────────────◆
-│ *_Powered by ©France King._*
-╰─────────────────◆`
-        };
-
-        // Send video details
-        await zk.sendMessage(dest, infoMess, { quoted: ms });
-
-        // Send the video as a URL (direct download link)
-        await zk.sendMessage(dest, {
-          video: { url: videoDlUrl },
-          mimetype: 'video/mp4'
-        }, { quoted: ms });
-
-        repondre('Download Success...');
-      } else {
-        repondre('Failed to download the video. Please try again later.');
-      }
-    } else {
-      repondre('No videos found.');
-    }
-  } catch (error) {
-    console.error('Error from API:', error);
-    repondre('An error occurred while searching or downloading the video.');
-  }
-});
-*/
 zokou({
-  nomCom: "videodoc",
-  categorie: "Search",
-  reaction: "🎥"
-}, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("Please insert a song/video name.");
+  'nomCom': "play",
+  'categorie': "Download",
+  'reaction': '🎧'
+}, async (_0x58fc78, _0x5be9bf, _0x1fae42) => {
+  const {
+    ms: _0x32cbc7,
+    repondre: _0x548948,
+    arg: _0x1cecfc
+  } = _0x1fae42;
+  if (!_0x1cecfc[0x0]) {
+    _0x548948("Please insert a song name.");
     return;
   }
-
   try {
-    let topo = arg.join(" ");
-    let videos = [];
-
-    // Perform YouTube search
-    const search = await yts(topo);
-    videos = search.videos;
-
-    if (videos && videos.length > 0) {
-      const videoUrl = videos[0].url;
-
-      // Call the API endpoint with the video URL to fetch the video download URL
-      const apiResponse = await fetch(`${BaseUrl}/api/download/ytmp4?url=${encodeURIComponent(videoUrl)}&apikey=${giftedapikey}`);
-      const apiResult = await apiResponse.json();
-
-      if (apiResult.status === 200 && apiResult.success) {
-        const videoDlUrl = apiResult.result.download_url;
-
-        // Prepare the message with video details
-        const infoMess = {
-          image: { url: videos[0].thumbnail },
-          caption: `*SCENE-MD VIDEO PLAYER*\n
-╭───────────────◆
-│ *Title:* ${apiResult.result.title}
-│ *Quality:* ${apiResult.result.type}
-│ *Duration:* ${videos[0].timestamp}
-│ *Viewers:* ${videos[0].views}
-│ *Uploaded:* ${videos[0].ago}
-│ *Artist:* ${videos[0].author.name}
-╰────────────────◆
-⦿ *Direct YtLink:* ${videoUrl}
-
-╭────────────────◆
-│𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌
-╰─────────────────◆`
+    let _0x264011 = _0x1cecfc.join(" ");
+    let _0x50dd2d = [];
+    const _0x187da5 = await yts(_0x264011);
+    _0x50dd2d = _0x187da5.videos;
+    if (_0x50dd2d && _0x50dd2d.length > 0x0) {
+      const _0x571980 = _0x50dd2d[0x0].url;
+      const _0x4983e8 = await fetch("https://api-gifted-tech.onrender.com/api/download/ytmp3?url=" + encodeURIComponent(_0x571980) + "&apikey=" + "ibrahimtech_ai");
+      const _0x57ae8e = await _0x4983e8.json();
+      if (_0x57ae8e.status === 0xc8 && _0x57ae8e.success) {
+        const _0x2635bb = _0x57ae8e.result.download_url;
+        const _0x52836b = {
+          'image': {
+            'url': _0x50dd2d[0x0].thumbnail
+          },
+          'caption': "🔍 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐒𝐄𝐀𝐑𝐂𝐇 𝐄𝐍𝐆𝐈𝐍𝐄 🔎\n⏳\n⏳⏳\n⏳⏳⏳\n> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌 😡"
         };
-
-        // Send video details
-        await zk.sendMessage(dest, infoMess, { quoted: ms });
-
-        // Send the video as a URL (direct download link)
-        await zk.sendMessage(dest, {
-          document: { url: videoDlUrl },
-          mimetype: 'video/mp4'
-        }, { quoted: ms });
-
-        repondre('Downloaded Successfully✅.');
+        await _0x5be9bf.sendMessage(_0x58fc78, _0x52836b, {
+          'quoted': _0x32cbc7
+        });
+        await _0x5be9bf.sendMessage(_0x58fc78, {
+          'audio': {
+            'url': _0x2635bb
+          },
+          'mimetype': "audio/mp4"
+        }, {
+          'quoted': _0x32cbc7
+        });
+        _0x548948("Downloded Successfully by Beltah Tech 254✅");
       } else {
-        repondre('❌ Failed to download the video. Please try again later.');
+        _0x548948("Failed to download audio. Please try again later.");
       }
     } else {
-      repondre('No videos found.');
+      _0x548948("No audio found.");
     }
-  } catch (error) {
-    console.error('Error from API:', error);
-    repondre('An error occurred while searching or downloading the video.');
+  } catch (_0xb67b29) {
+    console.error("Error from API:", _0xb67b29);
+    _0x548948("An error occurred while searching or downloading the audio.");
   }
 });
-//working 
-/*
-king({
-  nomCom: "song",
-  categorie: "Search",
-  reaction: "💿"
-}, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("Please insert a song name.");
-    return;
-  }
-
-  try {
-    let topo = arg.join(" ");
-    let videos = [];
-
-    // Perform YouTube search
-    const search = await yts(topo);
-    videos = search.videos;
-
-    if (videos && videos.length > 0) {
-      const videoUrl = videos[0].url;
-
-      // Call the API endpoint with the video URL to fetch audio download URL
-      const apiResponse = await fetch(`${BaseUrl}/api/download/ytmp3?url=${encodeURIComponent(videoUrl)}&apikey=${giftedapikey}`);
-      const apiResult = await apiResponse.json();
-
-      if (apiResult.status === 200 && apiResult.success) {
-        const audioDlUrl = apiResult.result.download_url;
-        const songTitle = apiResult.result.title;
-
-        // Prepare the message with song details
-        const infoMess = {
-          image: { url: videos[0].thumbnail },
-          caption: `*FLASH-MD SONG PLAYER*\n
-╭───────────────◆
-│⿻ *Title:* ${songTitle}
-│⿻ *Quality:* ${apiResult.result.type}
-│⿻ *Duration:* ${videos[0].timestamp}
-│⿻ *Viewers:* ${videos[0].views}
-│⿻ *Uploaded:* ${videos[0].ago}
-│⿻ *Artist:* ${videos[0].author.name}
-╰────────────────◆
-⦿ *Direct YtLink:* ${videoUrl}
-
-╭────────────────◆
-│ *_Powered by ©France King._*
-╰─────────────────◆`,
-          contextInfo: {
-            externalAdReply: {
-              title: "FLASH-MD SONG PLAYER",
-              body: "Powered by France King",
-              thumbnailUrl: videos[0].thumbnail,
-              sourceUrl: 'https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P',
-              mediaType: 1,
-              renderLargerThumbnail: true
-            }
-          }
-        };
-
-        // Send song details
-        await zk.sendMessage(dest, infoMess, { quoted: ms });
-
-        // Send the audio as a Buffer with the file name set to the song title
-        await zk.sendMessage(dest, {
-          document: { url: audioDlUrl },
-          mimetype: 'audio/mpeg',
-          fileName: `${songTitle}.mp3`
-        }, { quoted: ms });
-
-        // Optionally, send a playable audio link or a preview if needed
-        // Ensure the link is valid and directly playable
-        const audioPreviewMessage = {
-          text: `Here is a preview of the song: ${songTitle}\nListen to it [here](${audioDlUrl}).`,
-          contextInfo: {
-            externalAdReply: {
-              title: "Song Preview",
-              body: "Enjoy the preview!",
-              thumbnailUrl: videos[0].thumbnail,
-              sourceUrl: audioDlUrl,
-              mediaType: 2,
-              renderLargerThumbnail: true
-            }
-          }
-        };
-
-        await zk.sendMessage(dest, audioPreviewMessage, { quoted: ms });
-
-        repondre('Download Success...');
-      } else {
-        repondre('Failed to download audio. Please try again later.');
-      }
-    } else {
-      repondre('No audio found.');
-    }
-  } catch (error) {
-    console.error('Error from API:', error);
-    repondre('An error occurred while searching or downloading the audio.');
-  }
-});
-*/
-
-//FUCK HII CODE KUBABAKE.. 💀 💔
-/*
-king({
-  nomCom: "sing",
-  categorie: "Search",
-  reaction: "💿"
-}, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("Please insert a song name.");
-    return;
-  }
-
-  try {
-    let topo = arg.join(" ");
-    let videos = [];
-
-    // Perform YouTube search
-    const search = await yts(topo);
-    videos = search.videos;
-
-    if (videos && videos.length > 0) {
-      const videoTitle = videos[0].title;
-      const videoUrl = videos[0].url;
-
-      // Call the API endpoint with the video title to fetch audio download URL
-      const apiResponse = await fetch(`https://itzpire.com/download/play-youtube?title=${encodeURIComponent(videoTitle)}`);
-      const apiResult = await apiResponse.json();
-
-      if (apiResult.code === 200 && apiResult.status === "success") {
-        const audioDlUrl = apiResult.data.audio.url;
-        const songTitle = apiResult.data.audio.title;
-        const videoThumbnail = apiResult.data.audio.thumb;
-        const videoChannel = apiResult.data.audio.channel;
-        const videoPublished = apiResult.data.audio.published;
-        const videoViews = apiResult.data.audio.views;
-
-        // Prepare the message with song details
-        const infoMess = {
-          image: { url: videoThumbnail },
-          caption: `*FLASH-MD SONG PLAYER*\n
-╭───────────────◆
-│⿻ *Title:* ${songTitle}
-│⿻ *Quality:* High
-│⿻ *Duration:* ${videos[0].timestamp}
-│⿻ *Viewers:* ${videoViews}
-│⿻ *Uploaded:* ${videoPublished}
-│⿻ *Artist:* ${videoChannel}
-╰────────────────◆
-⦿ *Direct YtLink:* ${videoUrl}
-
-╭────────────────◆
-│ *_Powered by ©France King._*
-╰─────────────────◆`,
-          contextInfo: {
-            externalAdReply: {
-              title: "FLASH-MD SONG PLAYER",
-              body: "Powered by France King",
-              thumbnailUrl: videoThumbnail,
-              sourceUrl: 'https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P',
-              mediaType: 1,
-              renderLargerThumbnail: true
-            }
-          }
-        };
-
-        // Send song details
-        await zk.sendMessage(dest, infoMess, { quoted: ms });
-
-        // Send the audio as a Buffer with the file name set to the song title
-        await zk.sendMessage(dest, {
-          document: { url: audioDlUrl },
-          mimetype: 'audio/mp4',
-          fileName: `${songTitle}.mp3`
-        }, { quoted: ms });
-
-        // Optionally, send a playable audio link or a preview if needed
-        // Ensure the link is valid and directly playable
-        const audioPreviewMessage = {
-          text: `Here is a preview of the song: ${songTitle}\nListen to it [here](${audioDlUrl}).`,
-          contextInfo: {
-            externalAdReply: {
-              title: "Song Preview",
-              body: "Enjoy the preview!",
-              thumbnailUrl: videoThumbnail,
-              sourceUrl: audioDlUrl,
-              mediaType: 2,
-              renderLargerThumbnail: true
-            }
-          }
-        };
-
-        await zk.sendMessage(dest, audioPreviewMessage, { quoted: ms });
-
-        repondre('Download Success...');
-      } else {
-        repondre('Failed to download audio. Please try again later.');
-      }
-    } else {
-      repondre('No audio found.');
-    }
-  } catch (error) {
-    console.error('Error from API:', error);
-    repondre('An error occurred while searching or downloading the audio.');
-  }
-});*/
-
 zokou({
-  nomCom: "video",
-  categorie: "Search",
-  reaction: "🎥"
-}, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("Please insert a song/video name.");
+  'nomCom': "song",
+  'categorie': "Download",
+  'reaction': '🎸'
+}, async (_0x4676e4, _0x410bd7, _0x48506b) => {
+  const {
+    ms: _0x2dcbc3,
+    repondre: _0x2c8af9,
+    arg: _0x1acaf2
+  } = _0x48506b;
+  if (!_0x1acaf2[0x0]) {
+    _0x2c8af9("Please insert a song name.");
     return;
   }
-
   try {
-    let topo = arg.join(" ");
-    let videos = [];
-
-    // Perform YouTube search
-    const search = await yts(topo);
-    videos = search.videos;
-
-    if (videos && videos.length > 0) {
-      const videoUrl = videos[0].url;
-
-      // Call the API endpoint with the video URL to fetch the video download URL
-      const apiResponse = await fetch(`https://api.junn4.my.id/download/ytmp4?url=${encodeURIComponent(videoUrl)}`);
-      const apiResult = await apiResponse.json();
-
-      if (apiResult.status === 200 && apiResult.result) {
-        const videoData = apiResult.result;
-        const videoDlUrl = videoData.media;
-
-        // Prepare the message with video details
-        const infoMess = {
-          image: { url: videos[0].thumbnail },
-          caption: `*SCENE-MD VIDEO PLAYER*\n
-╭───────────────◆
-│ *Title:* ${videoData.title}
-│ *Duration:* ${videoData.duration}
-│ *Viewers:* ${videoData.views}
-│ *Uploaded:* ${videoData.upload}
-│ *Artist:* ${videoData.channel}
-╰────────────────◆
-⦿ *Direct YtLink:* ${videoUrl}
-
-╭────────────────◆
-│𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌
-╰─────────────────◆`
+    let _0x2fcb3a = _0x1acaf2.join(" ");
+    let _0x37afcd = [];
+    const _0x372c1f = await yts(_0x2fcb3a);
+    _0x37afcd = _0x372c1f.videos;
+    if (_0x37afcd && _0x37afcd.length > 0x0) {
+      const _0xf0756b = _0x37afcd[0x0].url;
+      const _0x53113e = await fetch("https://api-gifted-tech.onrender.com/api/download/ytmp3?url=" + encodeURIComponent(_0xf0756b) + '&apikey=' + "ibrahimtech_ai");
+      const _0x31e9e7 = await _0x53113e.json();
+      if (_0x31e9e7.status === 0xc8 && _0x31e9e7.success) {
+        const _0x57eb5d = _0x31e9e7.result.download_url;
+        const _0x5bada4 = {
+          'image': {
+            'url': _0x37afcd[0x0].thumbnail
+          },
+          'caption': "🔍 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐒𝐄𝐀𝐑𝐂𝐇 𝐄𝐍𝐆𝐈𝐍𝐄 🔎\n⏳\n⏳⏳\n⏳⏳⏳\n> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌 😡"
         };
-
-        // Send video details
-        await zk.sendMessage(dest, infoMess, { quoted: ms });
-
-        // Send the video as a URL (direct download link)
-        await zk.sendMessage(dest, {
-          video: { url: videoDlUrl },
-          mimetype: 'video/mp4'
-        }, { quoted: ms });
-
-        repondre('Downloaded Successfully ✅.');
+        await _0x410bd7.sendMessage(_0x4676e4, _0x5bada4, {
+          'quoted': _0x2dcbc3
+        });
+        await _0x410bd7.sendMessage(_0x4676e4, {
+          'audio': {
+            'url': _0x57eb5d
+          },
+          'mimetype': "audio/mp4"
+        }, {
+          'quoted': _0x2dcbc3
+        });
+        _0x2c8af9("Downloded Successfully by Beltah Tech 254✅");
       } else {
-        repondre('❌ Failed to download the video. Please try again later.');
+        _0x2c8af9("Failed to download audio. Please try again later.");
       }
     } else {
-      repondre('No videos found.');
+      _0x2c8af9("No audio found.");
     }
-  } catch (error) {
-    console.error('Error from API:', error);
-    repondre('An error occurred while searching or downloading the video.');
-  }
-});
-
-
-zokou({
-  nomCom: "song",
-  categorie: "Search",
-  reaction: "🎥"
-}, async (dest, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
-
-  if (!arg[0]) {
-    repondre("Please insert a song/video name.");
-    return;
-  }
-
-  try {
-    let topo = arg.join(" ");
-    let videos = [];
-
-    // Perform YouTube search
-    const search = await yts(topo);
-    videos = search.videos;
-
-    if (videos && videos.length > 0) {
-      const videoUrl = videos[0].url;
-
-      // Call the API endpoint with the video URL to fetch the video download URL
-      const apiResponse = await fetch(`https://api.junn4.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`);
-      const apiResult = await apiResponse.json();
-
-      if (apiResult.status === 200 && apiResult.result) {
-        const videoData = apiResult.result;
-        const videoDlUrl = videoData.media;
-      //  const channelUrl = videoData.channel_url || videoData.channel; // Assuming channel_url exists in the API response
-
-        // Prepare the message with video details
-        const infoMess = {
-          image: { url: videos[0].thumbnail },
-          caption: `*SCENE-MD SONG PLAYER*\n
-╭───────────────◆
-│ *Title:* ${videoData.title}
-│ *Duration:* ${videoData.duration}
-│ *Viewers:* ${videoData.views}
-│ *Uploaded:* ${videoData.upload}
-│ *Artist:* ${videoData.channel}
-╰────────────────◆
-⦿ *Direct YtLink:* ${videoUrl}
-
-╭────────────────◆
-│𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌
-╰─────────────────◆`
-        };
-
-        // Send video details
-        await zk.sendMessage(dest, infoMess, { quoted: ms });
-
-        // Send the video as a URL (direct download link)
-        await zk.sendMessage(dest, {
-          document: { url: videoDlUrl },
-          mimetype: 'audio/mpeg'
-        }, { quoted: ms });
-
-        repondre('Downloaded Successfully ✅.');
-      } else {
-        repondre('❌ Failed to download the video. Please try again later.');
-      }
-    } else {
-      repondre('No videos found.');
-    }
-  } catch (error) {
-    console.error('Error from API:', error);
-    repondre('An error occurred while searching or downloading the video.');
+  } catch (_0xf48fd3) {
+    console.error("Error from API:", _0xf48fd3);
+    _0x2c8af9("An error occurred while searching or downloading the audio.");
   }
 });
