@@ -1,6 +1,6 @@
 const { exec } = require('child_process');
 
-const { king } = require("../france/king")
+const { zokou } = require("../framework/zokou")
 //const { getGroupe } = require("../data/groupe")
 const { Sticker, StickerTypes } = require('wa-sticker-formatter');
 const {ajouterOuMettreAJourJid,mettreAJourAction,verifierEtatJid} = require("../data/antilien")
@@ -14,7 +14,7 @@ const { default: axios } = require('axios');
 const {getBinaryNodeChild, getBinaryNodeChildren} = require('@whiskeysockets/baileys').default;
 
 
-king({
+zokou({
   nomCom: "app", 
   aliases: ["apk", "application"], 
   reaction: "✨",
@@ -40,7 +40,7 @@ king({
     const appData = searchResult.result[0];
 
     // Prepare message with app details
-    const captionText = `*🌠FLASH-MD APPLICATION🌠*\n\n` +
+    const captionText = `*🌠SCENE-MD APPLICATION🌠*\n\n` +
                         `*Name:* ${appData.nama}\n` +
                         `*Developer:* ${appData.developer}\n` +
                         `*Rating:* ${appData.rate}\n` +
@@ -63,7 +63,7 @@ king({
   }
 });
 
-king(
+zokou(
   { nomCom: "add", categorie: 'Group', reaction: "👨🏿‍💼" },
   async (dest, zk, commandeOptions) => {
     let { repondre, verifAdmin, msgRepondu, infosGroupe, auteurMsgRepondu, verifGroupe, auteurMessage, superUser, idBot, arg } = commandeOptions;
@@ -164,7 +164,7 @@ king(
     try {
       pp = await zk.profilePictureUrl(dest, 'image').catch(() => "https://telegra.ph/file/39436fea9098ae0aeded3.jpg");
     } catch (error) {
-      pp = "https://telegra.ph/file/39436fea9098ae0aeded3.jpg";
+      pp = "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg";
     }
 
     let jpegThumbnail = Buffer.alloc(0);
@@ -210,7 +210,7 @@ king(
 
 
 
-king({
+zokou({
   nomCom: "broadcast",
   aliases: ["bc", "cast"], // Adding aliases
   reaction: "📢",
@@ -236,14 +236,14 @@ king({
     .map(entry => entry[1]);
   let res = groups.map(v => v.id);
 
-  await repondre("*FLASH-MD is sending this message to all groups you are in*...");
+  await repondre("*SCENE-MD is sending this message to all groups you are in*...");
 
   for (let i of res) {
-    let txtbc = `*𝐅𝐋𝐀𝐒𝐇-𝐌𝐃 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓*\n\n🀄 Message: ${msgbc}\n\n🗣️ Author: ${nomAuteurMessage}`;
+    let txtbc = `*𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓*\n\n🀄 Message: ${msgbc}\n\n🗣️ Author: ${nomAuteurMessage}`;
 
     await zk.sendMessage(i, {
       image: {
-        url: "https://telegra.ph/file/ee2916cd24336231d8194.jpg"
+        url: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg"
       },
       caption: `${txtbc}`
     });
@@ -282,7 +282,7 @@ king({
      } 
 });*/
 
-king({ nomCom: "disap-off", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "disap-off", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
 const { ms, repondre, arg, verifGroupe, nomGroupe, infosGroupe, nomAuteurMessage, verifAdmin, superUser } = commandeOptions
 
 if (!verifGroupe) { repondre("This command works in groups only"); return; };
@@ -293,7 +293,7 @@ await zk.groupToggleEphemeral(dest, 0*24*3600);
  }
 );
 
-king({ nomCom: "disap", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "disap", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
 const { ms, repondre, arg, verifGroupe, nomGroupe, infosGroupe, nomAuteurMessage, verifAdmin, superUser } = commandeOptions
 
 if (!verifGroupe) { repondre("This command works in groups only"); return; };
@@ -304,7 +304,7 @@ if (!verifAdmin) { repondre("You are not an admin here!"); return; };
 );
 
 
-king({ nomCom: "req", categorie: 'Group', reaction: "☑️ " }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "req", categorie: 'Group', reaction: "☑️ " }, async (dest, zk, commandeOptions) => {
 const { ms, repondre, arg, verifGroupe, nomGroupe, infosGroupe, nomAuteurMessage, verifAdmin, superUser } = commandeOptions
 
 if (!verifGroupe) { repondre("This command works in groups only"); return; };
@@ -334,7 +334,7 @@ response.forEach((participant, index) => {
 
 
 
-king({ nomCom: "disap90", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "disap90", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
 const { ms, repondre, arg, verifGroupe, nomGroupe, infosGroupe, nomAuteurMessage, verifAdmin, superUser } = commandeOptions
 
 if (!verifGroupe) { repondre("This command works in groups only"); return; };
@@ -346,7 +346,7 @@ await zk.groupToggleEphemeral(dest, 90*24*3600);
 }
 );
 
-king({
+zokou({
   nomCom: "reject",
   aliases: ["rejectall", "rej", "reject-all"], // Adding aliases
   categorie: 'Group',
@@ -383,7 +383,7 @@ king({
 });
  
 
-king({ nomCom: "disap7", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "disap7", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
 const { ms, repondre, arg, verifGroupe, nomGroupe, infosGroupe, nomAuteurMessage, verifAdmin, superUser } = commandeOptions
 
 if (!verifGroupe) { repondre("This command works in groups only"); return; };
@@ -395,7 +395,7 @@ await zk.groupToggleEphemeral(dest, 7*24*3600);
 }
 );
 
-king({ nomCom: "disap1", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "disap1", categorie: 'Group', reaction: "👻" }, async (dest, zk, commandeOptions) => {
 const { ms, repondre, arg, verifGroupe, nomGroupe, infosGroupe, nomAuteurMessage, verifAdmin, superUser } = commandeOptions
 
 if (!verifGroupe) { repondre("This command works in groups only"); return; };
@@ -407,7 +407,7 @@ await zk.groupToggleEphemeral(dest, 1*24*3600);
 }
 );
 
-king({
+zokou({
   nomCom: "approve",
   aliases: ["approve-all", "accept"], // Adding aliases
   categorie: 'Group',
@@ -495,7 +495,7 @@ king({
 });
  */
 // Try update vcf 
-king({
+zokou({
   nomCom: "vcf",
   aliases: ["savecontact", "savecontacts"], // Adding aliases
   categorie: 'Group',
@@ -533,7 +533,7 @@ king({
 
     let cont = './contacts.vcf';
 
-    await repondre(`A moment, *FLASH-MD* is compiling ${partic.length} contacts into a vcf...`);
+    await repondre(`A moment, *SCENE-MD* is compiling ${partic.length} contacts into a vcf...`);
 
     await fs.writeFileSync(cont, vcard.trim());
 
@@ -541,7 +541,7 @@ king({
       document: fs.readFileSync(cont),
       mimetype: 'text/vcard',
       fileName: `${metadat.subject}.Vcf`,
-      caption: `VCF for ${metadat.subject}\nTotal Contacts: ${partic.length}\n*KEEP USING FLASH-MD*`
+      caption: `VCF for ${metadat.subject}\nTotal Contacts: ${partic.length}\n*THANK YOU FOR LOVING SCENE-MD*`
     }, { ephemeralExpiration: 86400, quoted: ms });
 
     fs.unlinkSync(cont);
@@ -552,8 +552,7 @@ king({
 });
 
 
-       
-king({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest, zk, commandeOptions) => {
+       zokou({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest, zk, commandeOptions) => {
 
   const { ms, repondre, arg, verifGroupe, nomGroupe, infosGroupe, nomAuteurMessage, verifAdmin, superUser } = commandeOptions
 
@@ -568,14 +567,13 @@ king({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest, zk
   } ;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   var tag = ""; 
-  tag += `========================\n  
-        🌟 *FLASH-MD* 🌟
-========================\n
-👥 Group : ${nomGroupe} 🚀 
-👤 Author : *${nomAuteurMessage}* 👋 
-📜 Message : *${mess}* 📝
-========================\n
-\n
+  tag += `╭─────═[ 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐓𝐀𝐆𝐆𝐄𝐃 𝐀𝐋𝐋 ]═─────
+│╭───────────────···
+⬡│▸ 👥 Group : ${nomGroupe} 🚀 
+⬡│▸ 👤 Author : *${nomAuteurMessage}* 👋 
+⬡│▸ 📜 Message : *${mess}* 📝
+┬╰────────────────···
+╘✦•·············•••••••••···············•••••••••··················•✦\n
 
 ` ;
 
@@ -600,7 +598,7 @@ king({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest, zk
 });
 
 
-king({
+zokou({
   nomCom: "invite",
   aliases: ["link"], // Adding alias
   categorie: 'Group',
@@ -617,7 +615,7 @@ king({
     const link = await zk.groupInviteCode(dest);
     const inviteLink = `https://chat.whatsapp.com/${link}`;
 
-    const mess = `Hello ${nomAuteurMessage}, here is the group link of ${nomGroupe}:\n\nClick Here To Join: ${inviteLink}`;
+    const mess = `> POWERED BY BELTAH HACKING TEAM\n\nHello ${nomAuteurMessage}, here is the group link of ${nomGroupe}:\n\nClick Here To Join: ${inviteLink}`;
     repondre(mess);
   } catch (error) {
     console.error("Error fetching group invite link:", error.message || error);
@@ -718,7 +716,7 @@ await zk.sendMessage(dest, { image: { url: pp}, caption: links}, { quoted: ms});
 
 
 /** *nommer un membre comme admin */
-king({ nomCom: "promote", categorie: 'Group', reaction: "👨🏿‍💼" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "promote", categorie: 'Group', reaction: "👨🏿‍💼" }, async (dest, zk, commandeOptions) => {
   let { repondre, msgRepondu, infosGroupe, auteurMsgRepondu, verifGroupe, auteurMessage, superUser, idBot } = commandeOptions;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   if (!verifGroupe) { return repondre("For groups only"); }
@@ -779,7 +777,7 @@ king({ nomCom: "promote", categorie: 'Group', reaction: "👨🏿‍💼" }, asy
 //fin nommer
 /** ***demettre */
 
-king({ nomCom: "demote", categorie: 'Group', reaction: "👨🏿‍💼" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "demote", categorie: 'Group', reaction: "👨🏿‍💼" }, async (dest, zk, commandeOptions) => {
   let { repondre, msgRepondu, infosGroupe, auteurMsgRepondu, verifGroupe, auteurMessage, superUser, idBot } = commandeOptions;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   if (!verifGroupe) { return repondre("For groups only"); }
@@ -845,7 +843,7 @@ king({ nomCom: "demote", categorie: 'Group', reaction: "👨🏿‍💼" }, asyn
 
 /** ***fin démettre****  **/
 /** **retirer** */
-king({ nomCom: "remove", categorie: 'Group', reaction: "👨🏿‍💼" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "remove", categorie: 'Group', reaction: "👨🏿‍💼" }, async (dest, zk, commandeOptions) => {
   let { repondre, msgRepondu, infosGroupe, auteurMsgRepondu, verifGroupe, nomAuteurMessage, auteurMessage, superUser, idBot } = commandeOptions;
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   if (!verifGroupe) { return repondre("for groups only"); }
@@ -890,7 +888,7 @@ king({ nomCom: "remove", categorie: 'Group', reaction: "👨🏿‍💼" }, asyn
             if (admin == false) {
               const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif"
               var sticker = new Sticker(gifLink, {
-                pack: 'FLASH-MD', // The pack name
+                pack: 'BELTAH TECH', // The pack name
                 author: nomAuteurMessage, // The author name
                 type: StickerTypes.FULL, // The sticker type
                 categories: ['🤩', '🎉'], // The sticker category
@@ -957,7 +955,7 @@ king({ nomCom: "remove", categorie: 'Group', reaction: "👨🏿‍💼" }, asyn
 })
 */
 
-king({ nomCom: "del", categorie: 'User', reaction: "🧹" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "del", categorie: 'User', reaction: "🧹" }, async (dest, zk, commandeOptions) => {
 
   const { ms, repondre, verifGroupe, auteurMsgRepondu, idBot, msgRepondu, verifAdmin, superUser } = commandeOptions;
   
@@ -1004,7 +1002,7 @@ king({ nomCom: "del", categorie: 'User', reaction: "🧹" }, async (dest, zk, co
 
 
 
-king({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, verifGroupe } = commandeOptions;
   if (!verifGroupe) { repondre("order reserved for the group only"); return };
 
@@ -1028,7 +1026,7 @@ king({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) =
 
  //------------------------------------antilien-------------------------------
 
- king({ nomCom: "antilink", categorie: 'Group', reaction: "🔗" }, async (dest, zk, commandeOptions) => {
+ zokou({ nomCom: "antilink", categorie: 'Group', reaction: "🔗" }, async (dest, zk, commandeOptions) => {
 
 
   var { repondre, arg, verifGroupe, superUser, verifAdmin } = commandeOptions;
@@ -1096,7 +1094,7 @@ king({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) =
 
  //------------------------------------antibot-------------------------------
 
- king({ nomCom: "antibot", categorie: 'Group', reaction: "🔗" }, async (dest, zk, commandeOptions) => {
+ zokou({ nomCom: "antibot", categorie: 'Group', reaction: "🔗" }, async (dest, zk, commandeOptions) => {
 
 
   var { repondre, arg, verifGroupe, superUser, verifAdmin } = commandeOptions;
@@ -1162,7 +1160,7 @@ king({ nomCom: "info", categorie: 'Group' }, async (dest, zk, commandeOptions) =
 
 //----------------------------------------------------------------------------
 
-king({ nomCom: "group", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "group", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
 
   const { repondre, verifGroupe, verifAdmin, superUser, arg } = commandeOptions;
 
@@ -1205,7 +1203,7 @@ king({ nomCom: "group", categorie: 'Group' }, async (dest, zk, commandeOptions) 
   zk.groupLeave(dest)
 });*/
 
-king({ nomCom: "gname", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gname", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
 
   const { arg, repondre, verifAdmin } = commandeOptions;
 
@@ -1224,7 +1222,7 @@ king({ nomCom: "gname", categorie: 'Group' }, async (dest, zk, commandeOptions) 
  
 }) ;
 
-king({ nomCom: "gdesc", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gdesc", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
 
   const { arg, repondre, verifAdmin } = commandeOptions;
 
@@ -1243,7 +1241,7 @@ king({ nomCom: "gdesc", categorie: 'Group' }, async (dest, zk, commandeOptions) 
  
 }) ;
 
-king({ nomCom: "revoke", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "revoke", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
 
   const { arg, repondre, verifGroupe, verifAdmin } = commandeOptions;
 
@@ -1261,8 +1259,7 @@ if(!verifGroupe)  { repondre('This command is only allowed in groups.')} ;
  
 });
 
-
-king({ nomCom: "gpp", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gpp", categorie: 'Group' }, async (dest, zk, commandeOptions) => {
 
   const { repondre, msgRepondu, verifAdmin } = commandeOptions;
 
@@ -1287,7 +1284,7 @@ king({ nomCom: "gpp", categorie: 'Group' }, async (dest, zk, commandeOptions) =>
 });
 
 /////////////
-king({nomCom:"hidetag",categorie:'Group',reaction:"🎤"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"htag",categorie:'Group',reaction:"🎤"},async(dest,zk,commandeOptions)=>{
 
   const {repondre,msgRepondu,verifGroupe,arg ,verifAdmin , superUser}=commandeOptions;
 
@@ -1352,7 +1349,7 @@ king({nomCom:"hidetag",categorie:'Group',reaction:"🎤"},async(dest,zk,commande
         let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
 
         let stickerMess = new Sticker(media, {
-          pack: 'FLASH-MD-tag',
+          pack: 'Beltah Tech 254 🇰🇪',
           type: StickerTypes.CROPPED,
           categories: ["🤩", "🎉"],
           id: "12345",
@@ -1595,8 +1592,8 @@ king({
   });
 
 */
-king({
-    nomCom: 'automute',
+zokou({
+    nomCom: 'setclose',
     categorie: 'Group'
 }, async (dest, zk, commandeOptions) => {
 
@@ -1619,9 +1616,9 @@ king({
         }
 
         const msg = `*State:* ${state}\n\n` +
-                    `*Instructions:* To activate automatic mute, add the minute and hour after the command separated by ':'.\n` +
+                    `*Instructions:* To activate automatic group close, add the minute and hour after the command separated by ':'.\n` +
                     `Example: automute 9:30\n` +
-                    `To delete the automatic mute, use the command *automute del*`;
+                    `To delete the automatic group close, use the command *setclose del*`;
 
         repondre(msg);
         return;
@@ -1646,7 +1643,7 @@ king({
             }
 
             await cron.addCron(dest, 'mute_at', texte);
-            repondre(`Setting up automatic mute for ${texte}; restart to apply changes`);
+            repondre(`Setting up automatic group close for ${texte}; restart to apply changes`);
             exec('pm2 restart all'); // Restart the service after setting the cron
         } else {
             repondre('Please enter a valid time with hour and minute separated by :');
@@ -1655,8 +1652,8 @@ king({
 });
 
 	
-  king({
-    nomCom : 'autounmute',
+  zokou({
+    nomCom : 'setopen',
     categorie : 'Group'
 } , async (dest,zk,commandeOptions) => {
 
@@ -1673,17 +1670,17 @@ king({
       let state ;
       if (group_cron == null || group_cron.unmute_at == null) {
 
-          state = "No time set for autounmute" ;
+          state = "No time set for auto open the group" ;
 
       } else {
 
-        state = `The group will be un-muted at ${(group_cron.unmute_at).split(':')[0]}H ${(group_cron.unmute_at).split(':')[1]}`
+        state = `The group will be opened at ${(group_cron.unmute_at).split(':')[0]}H ${(group_cron.unmute_at).split(':')[1]}`
       }
 
       let msg = `* *State:* ${state}
-      * *Instructions:* To activate autounmute, add the minute and hour after the command separated by ':'
-      Example autounmute 7:30
-      * To delete autounmute, use the command *autounmute del*`
+      * *Instructions:* To activate auto open, add the minute and hour after the command separated by ':'
+      Example setopen 7:30
+      * To delete auto open, use the command *setopen del*`
 
         repondre(msg) ;
         return ;
@@ -1732,7 +1729,7 @@ king({
 
 
 
-king({
+zokou({
   nomCom : 'fkick',
   categorie : 'Group'
 } , async (dest,zk,commandeOptions) => {
@@ -1765,7 +1762,7 @@ king({
 }) ;
 
 
-king({
+zokou({
       nomCom : 'nsfw',
       categorie : 'Group'
 }, async (dest,zk,commandeOptions) => {
@@ -1803,7 +1800,7 @@ king({
 
  //------------------------------------antiword-------------------------------
 
- king({ nomCom: "antiword", categorie: 'Group', reaction: "🔗" }, async (dest, zk, commandeOptions) => {
+ zokou({ nomCom: "antiword", categorie: 'Group', reaction: "🔗" }, async (dest, zk, commandeOptions) => {
 
 
   var { repondre, arg, verifGroupe, superUser, verifAdmin } = commandeOptions;
@@ -1869,7 +1866,7 @@ king({
 
  //------------------------------------antilink-all-------------------------------
 
- king({ nomCom: "antilink-all", categorie: 'Group', reaction: "🔗" }, async (dest, zk, commandeOptions) => {
+ zokou({ nomCom: "antilink-all", categorie: 'Group', reaction: "🔗" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, verifGroupe, superUser, verifAdmin } = commandeOptions;
 
   if (!verifGroupe) {
@@ -1921,7 +1918,7 @@ king({
                  "or `antilink-all action/warn` to give warnings\n" +
                  "or `antilink-all action/delete` to remove the link without any sanctions\n\n" +
                  "Please note that by default, the antilink-all feature is set to delete.\n\n" +
-                 "*KEEP USING FLASH-MD 🤍*");
+                 "*THANK YOU FOR LOVING BELTAH-MD*");
       }
     } catch (error) {
       repondre(`Error: ${error.message}`);
