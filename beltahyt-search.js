@@ -1,10 +1,10 @@
-const { king } = require("../france/king");
-const { getytlink, ytdwn } = require("../france/ytdl-core");
+const { zokou } = require("../framework/zokou");
+const { getytlink, ytdwn } = require("../framework/ytdl-core");
 const yts = require("yt-search");
 const ytdl = require("france-king");
 const fs = require('fs');
 
-king({ nomCom: "yts", categorie: "Search", reaction: "✋" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "yts", categorie: "Search", reaction: "✋" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, arg } = commandeOptions;
   const query = arg.join(" ");
 
@@ -21,7 +21,7 @@ king({ nomCom: "yts", categorie: "Search", reaction: "✋" }, async (dest, zk, c
     for (let i = 0; i < 10; i++) {
       captions += `----------------\nTitle: ${resultat[i].title}\nTime : ${resultat[i].timestamp}\nUrl: ${resultat[i].url}\n`;
     }
-    captions += "\n======\n*powered by FLASH-MD*";
+    captions += "\n======\n*powered by BELTAH-MD*";
 
     // repondre(captions)
     zk.sendMessage(dest, { image: { url: resultat[0].thumbnail }, caption: captions }, { quoted: ms });
@@ -30,7 +30,7 @@ king({ nomCom: "yts", categorie: "Search", reaction: "✋" }, async (dest, zk, c
   }
 });
 
-king({
+zokou({
   nomCom: "ytmp4",
   categorie: "Download",
   reaction: "🎥"
@@ -77,7 +77,7 @@ _*En cours de téléchargement...*_\n\n`
 
     fileStream.on('finish', () => {
       // Envoi du fichier vidéo en utilisant l'URL du fichier local
-      zk.sendMessage(origineMessage, { video: { url: `./${filename}` }, caption: "Powered by *FLASH-MD*", gifPlayback: false }, { quoted: ms });
+      zk.sendMessage(origineMessage, { video: { url: `./${filename}` }, caption: "Powered by *BELTAH-MD*", gifPlayback: false }, { quoted: ms });
 
     });
 
@@ -92,7 +92,7 @@ _*En cours de téléchargement...*_\n\n`
   }
 });
 
-king({
+zokou({
   nomCom: "ytmp3",
   categorie: "Download",
   reaction: "💿"
