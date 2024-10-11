@@ -26,7 +26,7 @@ const runtime = function (seconds) {
 // Function to fetch GitHub repo data
 const fetchGitHubStats = async () => {
     try {
-        const repo = 'Bbeltahke/Tech-Z'; // Replace with your repo
+        const repo = 'Bbeltah/Tech-Z'; // Replace with your repo
         const response = await axios.get(`https://api.github.com/repos/${repo}`);
         const forks = response.data.forks_count;
         const stars = response.data.stargazers_count;
@@ -44,7 +44,7 @@ const fetchGitHubStats = async () => {
 
 zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre, prefixe, nomAuteurMessage } = commandeOptions;
-    let { cm } = require(__dirname + "/../france/king");
+    let { cm } = require(__dirname + "/../framework/zokou");
     var coms = {};
     var mode = "public";
 
@@ -99,9 +99,11 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 ⬡│▸ *Ram :* ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())} 
 ⬡│▸ *Uptime :* ${runtime(process.uptime())} 
 ┬╰────────────────···
-╘✦•·············•••••••••···············•••••••••··················•✦\n\n`;
+╘✦•·············•••••••••···············•••••••••··················•✦
 
-    let menuMsg = `*◇𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒◇*\n\n${readmore}`;
+> 𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌\n${readmore}`;
+
+    let menuMsg = `*◇𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒◇*\n`;
 
     // Sort categories alphabetically and generate menu
     const sortedCategories = Object.keys(coms).sort();
