@@ -1,5 +1,5 @@
-const { mediafireDl } = require("../france/dl/Function");
-const { king } = require('../france/king');
+const { mediafireDl } = require("../framework/dl/Function");
+const { zokou } = require('../framework/zokou');
 const fs = require('fs');
 const getFBInfo = require('@xaviabot/fb-downloader');
 const { default: axios } = require("axios");
@@ -54,7 +54,7 @@ async (dest, zk, commandeOptions) => {
 
 */
 
-king({
+zokou({
   nomCom: "story", 
   categorie: "Download",
   aliases: ["igstory", "instastory", "storydl"]
@@ -86,10 +86,10 @@ async (dest, zk, commandeOptions) => {
 
             if (media.type === 'image') {
                 
-                await zk.sendMessage(dest, { image: { url: mediaUrl }, caption: "_╰►IG-STORY IMAGE DOWNLOADED BY_ *FLASH-MD*" }, ms);
+                await zk.sendMessage(dest, { image: { url: mediaUrl }, caption: "_╰►IG-STORY IMAGE DOWNLOADED BY_ *SCENE-MD*" }, ms);
             } else if (media.type === 'video') {
                 
-                await zk.sendMessage(dest, { video: { url: mediaUrl }, caption: "_╰►IG-STORY VIDEO DOWNLOADED BY_ *FLASH-MD*" }, ms);
+                await zk.sendMessage(dest, { video: { url: mediaUrl }, caption: "_╰►IG-STORY VIDEO DOWNLOADED BY_ *SCENE-MD*" }, ms);
             } else {
                 repondre('Unsupported media type.');
             }
@@ -107,7 +107,7 @@ async (dest, zk, commandeOptions) => {
 
 
 
-king({
+zokou({
   nomCom: "insta", 
   categorie: "Download",
   aliases: ["ig", "igdl", "instagram"]
@@ -135,7 +135,7 @@ async (dest, zk, commandeOptions) => {
             if (result.data && result.data.length > 0) {
                 const media = result.data[0];
                 const mediaUrl = media.url;
-                const caption = "_╰►VIDEO DOWNLOADED BY_ *FLASH-MD*";
+                const caption = "_╰►VIDEO DOWNLOADED BY_ *SCENE-MD*";
 
                 await zk.sendMessage(dest, { video: { url: mediaUrl }, caption }, ms);
             } else {
@@ -166,7 +166,7 @@ async (dest, zk, commandeOptions) => {
 
 
 
-king({ nomCom: "gitclone", categorie: "Download" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gitclone", categorie: "Download" }, async (dest, zk, commandeOptions) => {
     const { ms, repondre, arg } = commandeOptions;
 
 
@@ -216,7 +216,7 @@ let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
 
 
 
-king({
+zokou({
     nomCom: "tiktok",
     categorie: "Download",
     aliases: ["tik", "tok", "tikdl"] // Adding aliases
@@ -236,13 +236,13 @@ king({
             return repondre('Failed to retrieve video. Please check the link and try again.');
         }
 
-        await repondre('A moment, *FLASH-MD* is downloading that...');
+        await repondre('A moment, *SCENE-MD* is downloading that...');
 
         const tikvid = data.data.no_wm;
 
         await zk.sendMessage(dest, {
             video: { url: tikvid },
-            caption: "╰►𝐇𝐞𝐫𝐞 𝐢𝐬 𝐲𝐨𝐮𝐫 𝐓𝐢𝐤𝐓𝐨𝐤 𝐕𝐢𝐝𝐞𝐨!\n𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐛𝐲 *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*",
+            caption: "╰►𝐇𝐞𝐫𝐞 𝐢𝐬 𝐲𝐨𝐮𝐫 𝐓𝐢𝐤𝐓𝐨𝐤 𝐕𝐢𝐝𝐞𝐨!\n𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐛𝐲 *𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌*",
             gifPlayback: false
         }, { quoted: ms });
 
@@ -353,7 +353,7 @@ try {
 */
 
 
-king({ nomCom: "video-dl", categorie: "Download" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "video-dl", categorie: "Download" }, async (dest, zk, commandeOptions) => {
     const { ms, repondre, arg } = commandeOptions;
     let input = arg.join(' ');
 
@@ -371,7 +371,7 @@ const load = await fetch(`https://www.noobs-api.000.pe/dipto/alldl?url=${input}`
 //let final = data.result;
   const final = data.result; 
 
-zk.sendMessage(dest, { video: { url: final}, caption: "╰►𝐇𝐞𝐫𝐞 𝐢𝐬 𝐲𝐨𝐮𝐫 𝐕𝐢𝐝𝐞𝐨!\n𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐛𝐲 *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*", gifPlayback: false }, { quoted: ms });
+zk.sendMessage(dest, { video: { url: final}, caption: "╰►𝐇𝐞𝐫𝐞 𝐢𝐬 𝐲𝐨𝐮𝐫 𝐕𝐢𝐝𝐞𝐨!\n𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐝 𝐛𝐲 *𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌*", gifPlayback: false }, { quoted: ms });
     
    } catch (e) { repondre("A fatal error has occured... \n " + e)}
        
@@ -519,7 +519,7 @@ zk.sendMessage(dest, { video: { url: nowm }, caption: "Here is your Tiktok Video
 
 */
 
-king({nomCom : "mediafire" , categorie : "Download"},async (dest , zk , commandeOptions)=>{
+zokou({nomCom : "mediafire" , categorie : "Download"},async (dest , zk , commandeOptions)=>{
   const {ms,repondre,arg} = commandeOptions ;
 
   let link = arg.join(' ')
@@ -543,7 +543,7 @@ await zk.sendMessage(
                 },
                 fileName: fileInfo[0].nama,
                 mimetype: fileInfo[0].mime,
-                caption: `*Downloaded by FLASH-MD:* ${fileInfo[0].nama}`,  
+                caption: `*Downloaded by SCENE-MD:* ${fileInfo[0].nama}`,  
             },
             { quoted: ms }
         );
@@ -554,7 +554,7 @@ await zk.sendMessage(
   
 });
 
-king({
+zokou({
   nomCom: "fb",
   categorie: "Download",
   reaction: "📽️",
@@ -619,7 +619,7 @@ Description: ${tik.desc}
   
 });*/
 
-king({
+zokou({
   nomCom: "fb2",
   categorie: "Download",
   reaction: "📽️",
@@ -651,8 +651,8 @@ async (dest, zk, commandeOptions) => {
         repondre(error);
       });
   } catch (error) {
-    console.error('An error occurred while Flash-Md was downloading your media:', error);
-    repondre('An error occurred while Flash-Md was downloading your media.', error);
+    console.error('An error occurred while Scene-Md was downloading your media:', error);
+    repondre('An error occurred while SCENE-MD was downloading your media.', error);
   }
 });
 
@@ -732,7 +732,7 @@ async (dest, zk, commandeOptions) => {
 */
     
 
-king({
+zokou({
   nomCom: "xvid", 
   categorie: "Download",
   aliases: ["xxx", "porn", "xxxnx"] // Adding aliases
@@ -754,7 +754,7 @@ async (dest, zk, commandeOptions) => {
     }
 
     if (!arg[0]) {
-        repondre('Please insert an *X Video Link* for *FLASH-MD* to download');
+        repondre('Please insert an *X Video Link* for *SCENE-MD* to download');
         return;
     }
 
@@ -766,7 +766,7 @@ async (dest, zk, commandeOptions) => {
             const medi = data.data.download;
             zk.sendMessage(dest, { 
                 video: { url: medi }, 
-                caption: "Here is your 18+ Video.\n_╰►DOWNLOADED BY_ *FLASH-MD*", 
+                caption: "Here is your 18+ Video.\n_╰►DOWNLOADED BY_ *SCENE-MD*", 
                 gifPlayback: false 
             }, { quoted: ms });
         } else {
@@ -778,7 +778,7 @@ async (dest, zk, commandeOptions) => {
 });
 
 
-king({
+zokou({
   nomCom: "gdrive",
   categorie: "Download"
 }, async (origineMessage, zk, commandeOptions) => {
@@ -802,7 +802,7 @@ king({
     
     const data = await response.json();
     
-    await repondre('*FLASH-MD* is downloading media from Google Drive. Please wait...');
+    await repondre('*SCENE-MD* is downloading media from Google Drive. Please wait...');
 
     if (data && data.downloadUrl) {
       const downloadUrl = data.downloadUrl;
@@ -1013,7 +1013,7 @@ async (dest, zk, commandeOptions) => {
 }); */
 
 
-king({
+zokou({
   nomCom: "element",
   categorie: "User",
   aliases: ["chem", "study"] // Adding aliases
@@ -1041,7 +1041,7 @@ async (dest, zk, commandeOptions) => {
             `.trim();
 
             // Send the element information
-            await repondre("A moment, FLASH-MD is sending your results");
+            await repondre("A moment, SCENE-MD is sending your results");
 
             // Send the image with element information as caption if available
             if (result.image) {
@@ -1056,7 +1056,7 @@ async (dest, zk, commandeOptions) => {
     }
 });
 
-king({
+zokou({
     nomCom: "npm",
 categorie: "Search",
 aliases: ["npmstalk", "npstalk", "pmstalk"] // Adding aliases
@@ -1088,12 +1088,12 @@ aliases: ["npmstalk", "npstalk", "pmstalk"] // Adding aliases
             } = result.data.data;
 
             // Construct the response message
-            const messageText = `*FLASH-MD NPM STALKER*:\n\n`
+            const messageText = `*SCENE-MD NPM STALKER*:\n\n`
                               + `*Name:* ${name}\n*Owner:* ${owner}\n*Version:* ${version}\n`
                               + `*Published:* ${pub}\n*Description:* ${description}\n`
                               + `*Package Link:* ${plink}\n*Download Link:* ${dlink}\n`
                               + `*Homepage:* ${homepage}\n*License:* ${license}\n`
-                              + `*Readme:* ${readme || 'N/A'}\n\n> POWERED BY © FRANCE KING`;
+                              + `*Readme:* ${readme || 'N/A'}\n\n> POWERED BY 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌`;
 
             await zk.sendMessage(dest, { text: messageText }, { quoted: ms });
         } else {
@@ -1104,7 +1104,7 @@ aliases: ["npmstalk", "npstalk", "pmstalk"] // Adding aliases
         await repondre('Error getting response from the API.');
     }
 });
-king({ nomCom: "image-dl", categorie: "Download" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "image-dl", categorie: "Download" }, async (dest, zk, commandeOptions) => {
     const { ms, repondre, arg } = commandeOptions;
     let input = arg.join(' ');
 
@@ -1135,13 +1135,13 @@ king({ nomCom: "image-dl", categorie: "Download" }, async (dest, zk, commandeOpt
             return;
         }
 
-        zk.sendMessage(dest, { image: { url: final }, caption: "_╰►IMAGE DOWNLOADED BY_ *FLASH-MD*", gifPlayback: false }, { quoted: ms });
+        zk.sendMessage(dest, { image: { url: final }, caption: "_╰►IMAGE DOWNLOADED BY_ *SCENE-MD*", gifPlayback: false }, { quoted: ms });
     } catch (e) {
         repondre("A fatal error has occurred... \n" + e.message);
     }
 });
 
-king({
+zokou({
   nomCom: "fetch",
   categorie: "Search",
   aliases: ["check", "try"] // Adding aliases
@@ -1171,11 +1171,11 @@ async (dest, zk, commandeOptions) => {
 
         if (/image\/.*/.test(contentType)) {
             // If content is an image, send it as a file
-            await zk.sendMessage(dest, { image: { url: formattedUrl }, caption: '> > *POWERED BY FLASH-MD*' }, { quoted: ms });
+            await zk.sendMessage(dest, { image: { url: formattedUrl }, caption: '> > *POWERED BY SCENE-MD*' }, { quoted: ms });
             return;
         } else if (/video\/.*/.test(contentType)) {
             // If content is a video, send it as a file
-            await zk.sendMessage(dest, { video: { url: formattedUrl }, caption: '> > *POWERED BY FLASH-MD*' }, { quoted: ms });
+            await zk.sendMessage(dest, { video: { url: formattedUrl }, caption: '> > *POWERED BY SCENE-MD*' }, { quoted: ms });
             return;
         } else if (/text|json/.test(contentType)) {
             // Handle text or JSON content
@@ -1200,7 +1200,7 @@ async (dest, zk, commandeOptions) => {
         repondre(`Error fetching data: ${error.message}`);
     }
 });
-king({ nomCom: "blackpink", aliases: ["bpink"], categorie: "Download" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "blackpink", aliases: ["bpink"], categorie: "Download" }, async (dest, zk, commandeOptions) => {
     const { ms, repondre, arg } = commandeOptions;
     
     // Check if there are any arguments, though for this command it might not be necessary
@@ -1257,7 +1257,7 @@ king({ nomCom: "blackpink", aliases: ["bpink"], categorie: "Download" }, async (
 
 
 
-king({
+zokou({
   nomCom: "twitter",
     aliases: ["xdl"],  
   categorie: "SocialMedia",
@@ -1291,8 +1291,8 @@ async (origineMessage, zk, commandeOptions) => {
 
       // Set the appropriate caption based on the media type
       const cap = mediaType === 'video'
-        ? '_╰►VIDEO  DOWNLOADED BY_ *FLASH-MD*'
-        : '_╰►IMAGE DOWNLOADED BY_ *FLASH-MD*';
+        ? '_╰►VIDEO  DOWNLOADED BY_ *BELTAH-MD*'
+        : '_╰►IMAGE DOWNLOADED BY_ *BELTAH-MD*';
 
       if (mediaType === 'video') {
         await zk.sendMessage(origineMessage, { video: { url: mediaURL }, caption: cap }, { quoted: ms });
