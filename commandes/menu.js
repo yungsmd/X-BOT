@@ -69,15 +69,15 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 
     // Determine the greeting based on the current time
     const hour = moment().hour();
-    let greeting = "Good Night";
+    let greeting = "Good Night 🌃 ";
     if (hour >= 0 && hour <= 11) {
-        greeting = "Good Morning";
+        greeting = "Good Morning🌄";
     } else if (hour >= 12 && hour <= 16) {
-        greeting = "Good Afternoon";
+        greeting = "Good Afternoon🌅";
     } else if (hour >= 16 && hour <= 21) {
-        greeting = "Good Evening";
+        greeting = "Good Evening🌆";
     } else if (hour >= 21 && hour <= 23) {
-        greeting = "Good Night";
+        greeting = "Good night🌃 ";
     }
 
     // Fetch GitHub stats
@@ -85,12 +85,11 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     const formattedTotalUsers = totalUsers.toLocaleString();
 
     let infoMsg = `
-*${greeting} ${nomAuteurMessage}*\n
-
+*${greeting}  ${nomAuteurMessage}*\n
 ╭─────═[ 𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 ]═─────
 │╭───────────────···
-┴│ *User :*  ${s.OWNER_NAME}
-⬡│▸ *Prefix :* ${s.PREFIXES} 
+┴│ *Owner :*  ${s.OWNER_NAME}
+⬡│▸ *Prefix :* ${s.PREFIXE} 
 ⬡│▸ *Time :* ${temps}
 ⬡│▸ *Date :* ${date} 
 ⬡│▸ *Mode :* ${mode}
@@ -119,7 +118,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 
         for (const cmd of sortedCommands) {
             menuMsg += ` 
-│✧⪼ ${commandNumber++}. ${cmd}`;
+│ ${commandNumber++}. ${cmd}`;
         }
         menuMsg += `
 │╰───────────
@@ -136,8 +135,8 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
             contextInfo: {
                 mentionedJid: [nomAuteurMessage],
                 externalAdReply: {
-                    title: "SCENE-MD AI BOT",
-                    body: "POWERED BY BELTAH HACKING TEAM",
+                    title: "😡𝐁𝐄𝐋𝐓𝐀𝐇 𝐓𝐄𝐂𝐇 𝐁𝐎𝐓𝐒😡",
+                    body: "𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌 💀",
                     thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
                     sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F',
                     mediaType: 1,
