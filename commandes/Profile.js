@@ -1,12 +1,12 @@
 const JavaScriptObfuscator = require('javascript-obfuscator');
 const pkg = require('@whiskeysockets/baileys');
 const { generateWAMessageFromContent, proto } = pkg;
-const { king } = require("../france/king");
+const { zokou } = require("../framework/zokou");
 const conf = require("../set");
 const { jidDecode } = require("@whiskeysockets/baileys");
 
 // Command to obfuscate JavaScript code
-king({
+zokou({
     nomCom: "enc",
     categorie: "General",
 }, async (dest, zk, commandeOptions) => {
@@ -46,14 +46,14 @@ king({
             {
                 name: "cta_url",
                 buttonParamsJson: JSON.stringify({
-                    display_text: "𝐉𝐎𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋",
-                    url: `https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P`
+                    display_text: "FOLLOW OUR CHANNEL",
+                    url: `https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F`
                 })
             },
             {
                 name: "quick_reply",
                 buttonParamsJson: JSON.stringify({
-                    display_text: "𝐅𝐋𝐀𝐒𝐇 𝐌𝐄𝐍𝐔",
+                    display_text: "😡𝐒𝐂𝐄𝐍𝐄-𝐌𝐃 𝐌𝐄𝐍𝐔😡",
                     id: `${conf.PREFIX}menu`
                 })
             }
@@ -71,7 +71,7 @@ king({
                             text: obfuscatedCode
                         }),
                         footer: proto.Message.InteractiveMessage.Footer.create({
-                            text: "> *POWERED BY FLASH-MD*"
+                            text: "> *POWERED BY SCENE-MD*"
                         }),
                         header: proto.Message.InteractiveMessage.Header.create({
                             title: "",
@@ -96,7 +96,7 @@ king({
 });
 
 // Command to get user profile and status
-king({
+zokou({
     nomCom: "whois",
     categorie: "User",
 }, async (dest, zk, commandeOptions) => {
@@ -138,7 +138,7 @@ king({
 });
 
 // Command to get user profile picture
-king({
+zokou({
     nomCom: "getpp",
     categorie: "User",
 }, async (dest, zk, commandeOptions) => {
