@@ -1,6 +1,6 @@
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
-const { king } = require("../france/king");
-const traduire = require("../france/traduction");
+const { zokou } = require("../framework/zokou");
+const traduire = require("../framework/traduction");
 const { downloadMediaMessage, downloadContentFromMessage } = require('@whiskeysockets/baileys');
 const fs = require("fs-extra");
 //const fs = require("fs");
@@ -34,7 +34,7 @@ async function uploadToTelegraph(Path) {
     }
 }
 
-king({ nomCom: "sticker", aliases: ["s"], categorie: "Converter", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
+zokou({ nomCom: "sticker", aliases: ["s"], categorie: "Converter", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
     let { ms, mtype, arg, repondre, nomAuteurMessage } = commandeOptions;
     var txt = JSON.stringify(ms.message);
 
@@ -58,7 +58,7 @@ king({ nomCom: "sticker", aliases: ["s"], categorie: "Converter", reaction: "�
             }
 
             const sticker = new Sticker(buffer, {
-                pack: "FLASH-MD",
+                pack: "BELTAH-MD",
                 author: nomAuteurMessage,
                 type: arg.includes("crop") || arg.includes("c") ? StickerTypes.CROPPED : StickerTypes.FULL,
                 quality: 70,
@@ -100,7 +100,7 @@ king({ nomCom: "sticker", aliases: ["s"], categorie: "Converter", reaction: "�
 
             // Add metadata to the sticker after video conversion
             const sticker = new Sticker(await fs.promises.readFile(stickerFileName), {
-                pack: "FLASH-MD",
+                pack: "BELTAH-MD",
                 author: nomAuteurMessage,
                 type: arg.includes("crop") || arg.includes("c") ? StickerTypes.CROPPED : StickerTypes.FULL,
                 quality: 70,
@@ -274,7 +274,7 @@ try{
   
 });
 */
-king({nomCom:"crop",categorie: "Converter", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
+zokou({nomCom:"crop",categorie: "Converter", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
    const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
 
   if(!msgRepondu) { repondre( 'make sure to mention the media' ) ; return } ;
@@ -297,7 +297,7 @@ mediamsg = msgRepondu.videoMessage
   var stick = await zk.downloadAndSaveMediaMessage(mediamsg)
 
      let stickerMess = new Sticker(stick, {
-            pack: 'Flash-Md',
+            pack: 'BELTAH TECH',
             
             type: StickerTypes.CROPPED,
             categories: ["🤩", "🎉"],
@@ -384,7 +384,7 @@ mediamsg = msgRepondu.videoMessage
 
 });*/
 
-king({nomCom:"take",categorie: "Converter", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
+zokou({nomCom:"take",categorie: "Converter", reaction: "👨🏿‍💻"},async(origineMessage,zk,commandeOptions)=>{
    const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
 
   if(!msgRepondu) { repondre( 'make sure to mention the media' ) ; return } ;
@@ -422,7 +422,7 @@ mediamsg = msgRepondu.videoMessage
 
 
 
-king({ nomCom: "write", categorie: "Converter", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
+zokou({ nomCom: "write", categorie: "Converter", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
   const { ms, msgRepondu, arg, repondre, nomAuteurMessage } = commandeOptions;
 
   if (!msgRepondu) {
@@ -473,7 +473,7 @@ king({ nomCom: "write", categorie: "Converter", reaction: "👨🏿‍💻" }, a
     // Create the sticker
     const stickerMess = new Sticker(meme, {
       pack: nomAuteurMessage,
-      author: 'FLASH-MD',
+      author: 'BELTAH-MD',
       type: StickerTypes.FULL,
       categories: ["🤩", "🎉"],
       id: "12345",
@@ -496,7 +496,7 @@ king({ nomCom: "write", categorie: "Converter", reaction: "👨🏿‍💻" }, a
 
 
 
-king({nomCom:"photo",categorie: "Converter", reaction: "👨🏿‍💻"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"photo",categorie: "Converter", reaction: "👨🏿‍💻"},async(dest,zk,commandeOptions)=>{
    const {ms , msgRepondu,arg,repondre,nomAuteurMessage} = commandeOptions ;
 
   if(!msgRepondu) { repondre( 'Reply to a sticker' ) ; return } ;
@@ -535,7 +535,7 @@ king({nomCom:"photo",categorie: "Converter", reaction: "👨🏿‍💻"},async(
         });
 });
 
-king({ nomCom: "trt", categorie: "Converter", reaction: "👨🏿‍💻" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "trt", categorie: "Converter", reaction: "👨🏿‍💻" }, async (dest, zk, commandeOptions) => {
 
   const { msgRepondu, repondre , arg } = commandeOptions;
 
@@ -568,7 +568,7 @@ king({ nomCom: "trt", categorie: "Converter", reaction: "👨🏿‍💻" }, asy
 }) ;
 
 
-king({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
+zokou({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async (origineMessage, zk, commandeOptions) => {
   const { msgRepondu, repondre } = commandeOptions;
 
   if (!msgRepondu) {
@@ -583,7 +583,7 @@ king({ nomCom: "url", categorie: "General", reaction: "👨🏿‍💻" }, async
   } else if (msgRepondu.imageMessage) {
       mediaPath = await zk.downloadAndSaveMediaMessage(msgRepondu.imageMessage);
   } else {
-      repondre('mention a image or video');
+      repondre('mention a image or video for *BELTAH-MD* to generate a url');
       return;
   }
 
