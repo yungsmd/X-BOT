@@ -1,5 +1,5 @@
-const { king } = require("../france/king");
-const {getAllSudoNumbers,isSudoTableNotEmpty} = require("../data/sudo")
+const { zokou } = require("../framework/zokou");
+const {getAllSudoNumbers,isSudoTableNotEmpty} = require("../bdd/sudo")
 const conf = require("../set")
 const fs = require("fs");
 
@@ -7,7 +7,7 @@ const fs = require("fs");
 
 
 
-king({ nomCom: "helpers", categorie: "General", reaction: "🤍 " }, async (dest, zk, commandeOptions) => {
+/*king({ nomCom: "helpers", categorie: "General", reaction: "🤍 " }, async (dest, zk, commandeOptions) => {
     const { ms, mybotpic } = commandeOptions;
 
     const devs = [
@@ -51,7 +51,7 @@ else {
     repondre("link error");
     
 }
-});
+});*/
 
 
 king({ nomCom: "test", categorie: "General", reaction: "😡" }, async (dest, zk, commandeOptions) => {
@@ -72,7 +72,7 @@ const data = './commands/test.mp3';
         contextInfo: {
           mentionedJid: [auteurMessage],
           externalAdReply: {
-          title: "FLASH-MD IS ACTIVE",
+          title: "",
           body: "Powered by France King",
           thumbnailUrl: "https://telegra.ph/file/4143dfac775bff078cc5a.jpg",
           sourceUrl: 'https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P',
