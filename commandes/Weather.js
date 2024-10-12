@@ -1,7 +1,7 @@
 const axios = require('axios');
-const { king } = require('../france/king');
+const { zokou } = require('../framework/zokou');
 
-king({
+zokou({
   nomCom: "weather",
   reaction: "🌡️",
   categorie: "Search"
@@ -55,7 +55,7 @@ king({
 
 🗺 Country: ${data.sys.country}
 
-*°Powered by FLASH-MD*`);
+*°Powered by BELTAH-MD*`);
 
   } catch (error) {
     console.error('Error fetching weather data:', error);
