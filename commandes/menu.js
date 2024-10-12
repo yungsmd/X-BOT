@@ -73,9 +73,9 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     if (hour >= 0 && hour <= 11) {
         greeting = "Good Morning🌄";
     } else if (hour >= 12 && hour <= 16) {
-        greeting = "Good Afternoon🌅";
+        greeting = "Good Afternoon☀️";
     } else if (hour >= 16 && hour <= 21) {
-        greeting = "Good Evening🌆";
+        greeting = "Good Evening⛅";
     } else if (hour >= 21 && hour <= 23) {
         greeting = "Good night🌃 ";
     }
@@ -93,8 +93,8 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 ⬡│▸ *Time :* ${temps}
 ⬡│▸ *Date :* ${date} 
 ⬡│▸ *Mode :* ${mode}
-⬡│▸ *Time Zone :* ${s.TZ}
-⬡│▸ *Total Users :* ${formattedTotalUsers}  
+⬡│▸ *Time Zone :* Africa/Nairobi
+⬡│▸ *Total Users :* 78${formattedTotalUsers}  
 ⬡│▸ *Ram :* ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())} 
 ⬡│▸ *Uptime :* ${runtime(process.uptime())} 
 ┬╰────────────────···
