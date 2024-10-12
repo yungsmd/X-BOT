@@ -1,12 +1,12 @@
-const { king } = require('../france/king');
+const { zokou } = require('../framework/zokou');
 const axios = require("axios")
 let { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
-const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("../data/banUser");
-const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("../data/banGroup");
+const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("../bdd/banUser");
+const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("../bdd/banGroup");
 
-const { generateProfilePicture } = require("../france/dl/Function");
-const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("../data/onlyAdmin");
-const {removeSudoNumber,addSudoNumber,issudo} = require("../data/sudo");
+const { generateProfilePicture } = require("../framework/dl/Function");
+const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("../bdd/onlyAdmin");
+const {removeSudoNumber,addSudoNumber,issudo} = require("../bdd/sudo");
 //const conf = require("../set");
 const fs = require('fs-extra');
 const sleep =  (ms) =>{
@@ -29,7 +29,7 @@ const sleep =  (ms) =>{
 
 
     
-king({ nomCom:' lastseen', categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom:' lastseen', categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
 
 const { idBot, arg, ms, repondre, superUser, msgRepondu } = commandeOptions;
 
@@ -54,7 +54,7 @@ await zk.updateLastSeenPrivacy(priv)
 
 
 
-king({ nomCom: 'online', categorie: "WhatsApp" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: 'online', categorie: "WhatsApp" }, async (dest, zk, commandeOptions) => {
 
 const { idBot, arg, ms, repondre, superUser, msgRepondu } = commandeOptions;
 
@@ -77,7 +77,7 @@ await zk.updateOnlinePrivacy(priva)
 
 })
 
-king({ nomCom: 'mydp', categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: 'mydp', categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
 
 const { idBot, arg, ms, repondre, superUser, msgRepondu } = commandeOptions;
 
@@ -101,7 +101,7 @@ await zk.updateProfilePicturePrivacy(privac)
 
 
 
-king({ nomCom: 'mystatus', categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: 'mystatus', categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
 
 const { idBot, arg, ms, repondre, superUser, msgRepondu } = commandeOptions;
 
@@ -124,7 +124,7 @@ await zk.updateStatusPrivacy(privacy)
 })
 
 
-king({ nomCom: 'groupadd', categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: 'groupadd', categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
 
 const { idBot, arg, ms, repondre, superUser, msgRepondu } = commandeOptions;
 
@@ -152,7 +152,7 @@ await zk.updateGroupsAddPrivacy(privacq)
 
 
 
-king({ nomCom: 'privacy' , categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: 'privacy' , categorie: 'WhatsApp' }, async (dest, zk, commandeOptions) => {
 
 const { idBot, ms, repondre, superUser, msgRepondu } = commandeOptions;
 
@@ -181,7 +181,7 @@ const msgg = `*Privacy settings*
 *Call Add :* ${calladd}`;
 
 
-const avatar = await zk.profilePictureUrl(idBot, 'image').catch(_ => 'https://telegra.ph/file/b34645ca1e3a34f1b3978.jpg');
+const avatar = await zk.profilePictureUrl(idBot, 'image').catch(_ => 'https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg');
 
 await zk.sendMessage(dest, { image: { url: avatar}, caption: msgg}, { quoted: ms}) 
 
@@ -190,7 +190,7 @@ await zk.sendMessage(dest, { image: { url: avatar}, caption: msgg}, { quoted: ms
 });
 
 
-king({ nomCom: 'fullpp', categorie: 'User' }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: 'fullpp', categorie: 'User' }, async (dest, zk, commandeOptions) => {
 
 const { idBot, ms, repondre, superUser, msgRepondu } = commandeOptions;
 
@@ -228,7 +228,7 @@ fs.unlinkSync(medis)
 
   
 
-  king({ nomCom: 'tgs', categorie: 'Mods' }, async (dest, zk, commandeOptions) => {
+  zokou({ nomCom: 'tgs', categorie: 'Mods' }, async (dest, zk, commandeOptions) => {
     const { ms, repondre, arg, nomAuteurMessage, superUser } = commandeOptions;
   
     if (!superUser) {
@@ -262,7 +262,7 @@ fs.unlinkSync(medis)
         type = 'not animated sticker'
       }
   
-      let msg = `   Flash-stickers-dl
+      let msg = `   Beltah-Tech-stickers-dl
       
   *Name :* ${stickers.data.result.name}
   *Type :* ${type} 
@@ -285,7 +285,7 @@ fs.unlinkSync(medis)
   
           const sticker = new Sticker(buffer.data, {
             pack: nomAuteurMessage,
-            author: "FLASH-MD",
+            author: "Beltah Tech",
             type: StickerTypes.FULL,
             categories: ['🤩', '🎉'],
             id: '12345',
@@ -309,7 +309,7 @@ fs.unlinkSync(medis)
     }
   });
 
-king({ nomCom: "crew", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "crew", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, arg, auteurMessage, superUser, auteurMsgRepondu, msgRepondu } = commandeOptions;
 
   if (!superUser) { repondre("only modds can use this command"); return };
@@ -325,7 +325,7 @@ king({ nomCom: "crew", categorie: "Mods" }, async (dest, zk, commandeOptions) =>
 
 });
 
- king({ nomCom: "left", categorie: "Group" }, async (dest, zk, commandeOptions) => {
+ zokou({ nomCom: "left", categorie: "Group" }, async (dest, zk, commandeOptions) => {
 
   const { ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage } = commandeOptions;
  if (!verifGroupe) { repondre("group only"); return };
@@ -337,7 +337,7 @@ king({ nomCom: "crew", categorie: "Mods" }, async (dest, zk, commandeOptions) =>
   await zk.groupLeave(dest)
 }); 
 
-king({ nomCom: "join", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "join", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
 
   const { arg, ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage } = commandeOptions;
 
@@ -355,7 +355,7 @@ king({ nomCom: "join", categorie: "Mods" }, async (dest, zk, commandeOptions) =>
 })
 
 
-king({ nomCom: "jid", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "jid", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
 
   const { arg, ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage,auteurMsgRepondu } = commandeOptions;
 
@@ -398,7 +398,7 @@ king({ nomCom: "block", categorie: "User" }, async (dest, zk, commandeOptions) =
 
   });
 */
-king({ nomCom: "unblock", categorie: "User" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "unblock", categorie: "User" }, async (dest, zk, commandeOptions) => {
 
   const { arg, ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage,auteurMsgRepondu } = commandeOptions;
 
@@ -421,7 +421,7 @@ king({ nomCom: "unblock", categorie: "User" }, async (dest, zk, commandeOptions)
   
     });
 
-king({ nomCom: "kickall", categorie: 'Group', reaction: "📣" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "kickall", categorie: 'Group', reaction: "📣" }, async (dest, zk, commandeOptions) => {
 
   const { auteurMessage ,ms, repondre, arg, verifGroupe, nomGroupe, infosGroupe, nomAuteurMessage, verifAdmin, superUser,prefixe } = commandeOptions
 
@@ -456,7 +456,7 @@ await zk.groupParticipantsUpdate(
 }
 });
 
-king({
+zokou({
     nomCom: 'ban',
     categorie: 'User',
 }, async (dest, zk, commandeOptions) => {
@@ -505,7 +505,7 @@ king({
 
 
 
-king({
+zokou({
     nomCom: 'bangroup',
     categorie: 'User',
 }, async (dest, zk, commandeOptions) => {
@@ -553,7 +553,7 @@ king({
 });
 
 
-king({
+zokou({
   nomCom: 'onlyadmin',
   categorie: 'Group',
 }, async (dest, zk, commandeOptions) => {
@@ -600,7 +600,7 @@ if(!verifGroupe) {repondre('order reservation for groups' ) ; return };
 } else { repondre('You are not entitled to this order')}
 });
 
-king({
+zokou({
   nomCom: 'sudo',
   categorie: 'Mods',
 }, async (dest, zk, commandeOptions) => {
@@ -649,7 +649,7 @@ if (!superUser) {repondre('This command is only allowed to the bot owner') ; ret
 });
 
 
-king({ nomCom: "save", categorie: "User" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "save", categorie: "User" }, async (dest, zk, commandeOptions) => {
 
   const { repondre , msgRepondu , nomAuteurMessage , auteurMessage } = commandeOptions;
   
@@ -702,7 +702,7 @@ king({ nomCom: "save", categorie: "User" }, async (dest, zk, commandeOptions) =>
           let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
   
           let stickerMess = new Sticker(media, {
-            pack: 'FLASH-MD',
+            pack: 'Beltah Tech',
             type: StickerTypes.CROPPED,
             categories: ["🤩", "🎉"],
             id: "12345",
@@ -733,7 +733,7 @@ king({ nomCom: "save", categorie: "User" }, async (dest, zk, commandeOptions) =>
 ;
 
 
-king({
+zokou({
   nomCom : 'mention',
   categorie : 'Mods',
 } , async (dest,zk,commandeOptions) => {
@@ -742,7 +742,7 @@ king({
 
  if (!superUser) {repondre('you do not have the rights for this command') ; return}
 
- const mbdd = require('../data/mention') ;
+ const mbdd = require('../bdd/mention') ;
 
  let alldata = await  mbdd.recupererToutesLesValeurs() ;
   data = alldata[0] ;
@@ -869,7 +869,7 @@ const restrictedJIDs = [
   "254751284190@s.whatsapp.net"
 ];
 
-king({ nomCom: "block", categorie: "User" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "block", categorie: "User" }, async (dest, zk, commandeOptions) => {
   const { arg, ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage, auteurMsgRepondu } = commandeOptions;
 
   if (!superUser) {
