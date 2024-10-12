@@ -140,7 +140,7 @@ zokou({
   nomCom: "developer",
   aliases: ["creator", "dev", "beltah"], // Adding aliases
   categorie: "General",
-  reaction: "🐐"
+  reaction: "😉"
 }, async (dest, zk, commandeOptions) => {
   const { ms, mybotpic } = commandeOptions;
 
