@@ -54,11 +54,11 @@ else {
 });*/
 
 
-king({ nomCom: "test", categorie: "General", reaction: "😡" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "test", categorie: "General", reaction: "😡" }, async (dest, zk, commandeOptions) => {
     const { ms , mybotpic, auteurMessage } = commandeOptions;
 
 
-const data = './commands/test.mp3';
+const data = './commandes/test.mp3';
 
     const dooc = {
         audio: {
@@ -72,10 +72,10 @@ const data = './commands/test.mp3';
         contextInfo: {
           mentionedJid: [auteurMessage],
           externalAdReply: {
-          title: "",
-          body: "Powered by France King",
-          thumbnailUrl: "https://telegra.ph/file/4143dfac775bff078cc5a.jpg",
-          sourceUrl: 'https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P',
+          title: "𝐁𝐄𝐋𝐓𝐀𝐇-𝐌𝐃 𝐈𝐒 𝐀𝐂𝐓𝐈𝐕𝐄",
+          body: "𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 𝐁𝐄𝐋𝐓𝐀𝐇 𝐇𝐀𝐂𝐊𝐈𝐍𝐆 𝐓𝐄𝐀𝐌",
+          thumbnailUrl: "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
+          sourceUrl: 'https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F',
           mediaType: 1,
           renderLargerThumbnail: true
           }}
@@ -88,7 +88,7 @@ await zk.sendMessage(dest, dooc, {quoted: ms});
 
 
 
-king({ nomCom: "owner", categorie: "General", reaction: "💥" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "owner", categorie: "General", reaction: "💥" }, async (dest, zk, commandeOptions) => {
     const { ms , mybotpic } = commandeOptions;
     
   const thsudo = await isSudoTableNotEmpty()
@@ -136,21 +136,21 @@ king({ nomCom: "owner", categorie: "General", reaction: "💥" }, async (dest, z
     },{quoted:ms});
   }
 });
-king({
+zokou({
   nomCom: "developer",
-  aliases: ["creator", "dev", "france"], // Adding aliases
+  aliases: ["creator", "dev", "beltah"], // Adding aliases
   categorie: "General",
   reaction: "🐐"
 }, async (dest, zk, commandeOptions) => {
   const { ms, mybotpic } = commandeOptions;
 
   const devs = [
-    { nom: "France King", numero: "254757835036" },
-    { nom: "᚛FranceKing᚜", numero: "254750948696" },
+    { nom: "ʙᴇʟᴛᴀʜ.ᴋᴇ", numero: "254114141192" },
+    { nom: "ᴀᴜᴅɪ.ʙᴇʟᴛᴀʜ", numero: "254737681758" },
     // Add more developers here with their name and number
   ];
 
-  let message = "Hello 👋\n *Welcome to Flash-Md!*\n\n*✦━━◆CREATOR INFO◆━━✦*\n\n\n *◇NAME: _France King_*\n*◇AGE: 23*\n*◇LOCATION: _On Earth_*\n*◇BELIEVER: YES ✅*\n*◇FRIENDLY: YES ✅*\n*◇EGOISTIC: _YEEES ✅_*\n*◇FAV TEAM: _CHELSEA_*\n*◇INSTAGRAM: https://instagram.com/france.king1*\n*◇Twitter: https://twitter.com/france_king1*\n\n______________________________\n\n*💙KEEP USING FLASH-MD🤍*\n\n\n_The following are my contacts_:\n:";
+  let message = "Hello 👋\n *Welcome to SCENE-MD!*\n\n*✦━━◆CREATOR INFO◆━━✦*\n\n\n *◇NAME: _Beltah Tech 254 🇰🇪_*\n*◇AGE: 21*\n*◇LOCATION: _On Earth_*\n*◇BELIEVER: YES ✅*\n*◇FRIENDLY: YES ✅*\n*◇EGOISTIC: _YEEES ✅_*\n*◇FAV TEAM: _MANCHESTER UNITED_*\n*◇INSTAGRAM: https://instagram.com/beltah.ke*\n*◇Twitter: https://twitter.com/beltah254*\n\n______________________________\n\n*💙THANK YOU FOR LOVING BELTAH-MD*\n\n\n_The following are my contacts_:\n:";
   
   for (const dev of devs) {
     message += `----------------\n• ${dev.nom} : https://wa.me/${dev.numero}\n`;
@@ -184,11 +184,11 @@ king({
 });
 
 
-king({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "support", categorie: "General" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, auteurMessage, } = commandeOptions; 
- 
+    
   repondre("look on pm sir ")
-  await zk.sendMessage(auteurMessage,{text : `https://wa.me/254757835036`},{quoted :ms})
+  await zk.sendMessage(auteurMessage,{text : `https://wa.me/254114141192`},{quoted :ms})
 
 })
  
