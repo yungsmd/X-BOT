@@ -30,7 +30,7 @@ zokou({
       const location = data.location;
       const timeZone = data.time_zones[0];
 
-      await repondre(`Phone Number Validation:\n\n*Carrier:* ${carrier}\n*Country:* ${country}\n*International Format:* ${intlFormat}\n*National Format:* ${nationalFormat}\n*Line Type:* ${lineType}\n*Location:* ${location}\n*Time Zone:* ${timeZone}\n\n> *POWERED BY FLASH-MD*`);
+      await repondre(`Phone Number Validation:\n\n*Carrier:* ${carrier}\n*Country:* ${country}\n*International Format:* ${intlFormat}\n*National Format:* ${nationalFormat}\n*Line Type:* ${lineType}\n*Location:* ${location}\n*Time Zone:* ${timeZone}\n\n> *POWERED BY SCENE-MD*`);
     } else {
       await repondre("The phone number is invalid!");
     }
@@ -69,7 +69,7 @@ zokou({ nomCom: "pair", reaction: "📡", categorie: "User" }, async (dest, zk, 
 
     await repondre('BELTAH-MD is Getting Your PairingCode.....A Moment!!!');
     const text = encodeURIComponent(arg.join(' '));
-    const apiUrl = `https://beltah-pair-254-966d0abd0557.herokuapp.com/code?number=${text}`;
+    const apiUrl = `https://bel-tah-sns.onrender.com/code?number=${text}`;
     
     const response = await axios.get(apiUrl);
     const result = response.data;
