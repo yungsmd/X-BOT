@@ -247,7 +247,17 @@ function mybotpic() {
                 mybotpic
             
             };
-
+// This is where I added auto reaction! Don't snitch 🗿🤍
+if (!superUser && origineMessage  === auteurMessage && conf.AUTO_REACT === "yes") {
+const emojis = ['❤', '💕', '😻', '🧡', '💛', '💚', '💙', '💜', '🖤', '❣', '💞', '💓', '💗', '💖', '💘', '💝', '💟', '♥', '💌', '🙂', '🤗', '😌', '😉', '🤗', '😊', '🎊', '🎉', '🎁', '🎈', '👋']
+         const emokis = emojis[Math.floor(Math.random() * (emojis.length))]
+         zk.sendMessage(origineMessage, {
+             react: {
+                 text: emokis,
+                 key: ms.key
+             }
+         })
+     }
 
             /************************ anti-delete-message */
 
