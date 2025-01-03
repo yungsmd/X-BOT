@@ -3,7 +3,7 @@
 
 ***
   
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THANKS FOR CHOOSING +SCENE-MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+BELTAH+TECH;RELEASED+18.10.2024" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THANKS FOR CHOOSING +SCENE-MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+BELTAH+TECH;RELEASED+03.01.2025" alt="Typing SVG" /></a>
   </p>
     <img alt="BELTAH-MD" width="700" height="300" src="https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg">
 <p align="center">
@@ -66,9 +66,8 @@ allowed! For we shall not offer any help if any error occur!
 ### THANKS TO:
 - [***Beltah Tech 254 🇰🇪***](https://github.com/Beltahtech) For all codes and commands Addition.
 
+
+
+
+
 © BELTAH XBOT ®03/01/2025
-
-
-
-
-BELTAH-MD BOT ©️ 2024 
