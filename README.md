@@ -1,4 +1,4 @@
-<h1 align="center">BELTAH-MD BOT</h1>
+<h1 align="center">BELTAH-XBOT</h1>
 <p align="center">  
 
 ***
@@ -12,7 +12,7 @@
 <p/>
 <p align="center">
 <a href="https://github.com/Beltahtech?tab=followers"><img title="Followers" src="https://img.shields.io/github/followers/Beltahtech?label=Followers&style=social"></a>
-<a href="https://github.com/Huaweike/AUTOMATIC-BOT/stargazers/"><img title="STARS" src="https://img.shields.io/github/stars/Huaweike/AUTOMATIC-BOT?&style=social"></a>
+<a href="https://github.com/Huaweike/AUTOMATIC-BOT/stargazers/"><img title="STARS" src="https://img.shields.io/github/stars/Beltah254/x-BOT?&style=social"></a>
 <a href="https://github.com/Huaweike/AUTOMATIC-BOT/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Huaweike/AUTOMATIC-BOT?style=social"></a>
 <a href="https://github.com/Huaweike/AUTOMATIC-BOT/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Huaweike/AUTOMATIC-BOT?label=Watching&style=social"></a>
   
@@ -26,11 +26,11 @@
 `PLAY CMD`
 `VIDEO CMD`
 `AND MANY MORE`
-✅ KEEP USING BELTAH-MD ✅
+✅ KEEP USING BELTAH-XBOT✅
 
 #### SETUP PROCEDURE
 
-***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/BELTAH254/XBOT/fork) It***
+***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/BELTAH254/X-BOT/fork) It***
 
 ***2.`Get Session ID` by  [`PAIRING CODE`](https://bel-tah-sns.onrender.com/pair) or [`PAIR CODE 2`](https://bel-tah-sns.onrender.com/)***
 
@@ -46,7 +46,7 @@
 
 **2. If You Have a Heroku Account**
     <br>
-<p align="center"><a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FBeltah254%2FXBOT&org=beltahteam&template=https%3A%2F%2Fgithub.com%2FBeltah254%2FXBOT"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FBeltah254%2FXBOT&template=https%3A%2F%2Fgithub.com%2FBeltah254%2FXBOT"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 ***
@@ -63,15 +63,10 @@ allowed! For we shall not offer any help if any error occur!
 
 
 ***
-
 ### THANKS TO:
-GOD THE CREATOR ❤️
-### THANKS TO:
-- [***Beltah Tech 254 🇰🇪***](https://github.com/Beltahtech) For several Cmds Addition.
-- [***France King***](https://github.com/franceking1) For several latest Cmd scripts.
-- [***Luffy***](https://github.com/Luffy2ndAccount) For Providing a Base of **BELTAH-MD**
+- [***Beltah Tech 254 🇰🇪***](https://github.com/Beltahtech) For all codes and commands Addition.
 
-
+© BELTAH XBOT ®03/01/2025
 
 
 
