@@ -10,7 +10,7 @@
 <table>
   <tr>
     <td>MENU STYLE</td>
-    <td>MO3 PLAYER</td>
+    <td>MP3 PLAYER</td>
   </tr>
   <tr>
     <td><a href="https://chat.whatsapp.com/JIQos2sUdGyII4qsig72pK"><img src="https://files.catbox.moe/de6o56.jpg" width="180"</td>
