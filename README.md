@@ -50,7 +50,7 @@
 
 ***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/BELTAH254/X-BOT/fork) It***
 
-***2.`Get Session ID` by  [`PAIRING CODE`](https://bel-tah-codes.onrender.com/pair) or [`PAIR CODE 2`](https://bel-tah-codes.onrender.com/)***
+***2.`Get Session ID` by  [`PAIRING CODE`](https://beltah-sessions.silvatechinc.myid/pair) or [`BELTAH SITE`](https://beltah-sessions.silvatechinc.myid/)***
 
 * - Copy The Session ID for it Will be needed during deployment*
 
