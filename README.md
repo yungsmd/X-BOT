@@ -18,10 +18,7 @@
   
 
 #### SETTING UP PROCEDURE
-
-  
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=FORKING+THIS+REPO+IS+A+MUST" alt="Typing SVG" /></a>
-
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=890&height=80&lines=FORKING+THIS+REPO+IS+A+MUST" alt="Typing SVG" /></a>
 ***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/BELTAH254/X-BOT/fork) It***
 
 **2.`Get Session ID by pairing or scanning qr`'**
