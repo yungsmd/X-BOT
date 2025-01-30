@@ -25,7 +25,7 @@
 
 🗿 [`PAIRING CODE`](https://bel-tah-codes-7huy.onrender.com/pair) 
 
-👻 [`SCAN QR`](https://bel-tah-codes-7huy.onrender.com/qr)
+👻 [`SCAN QR`](https://bel-tah-codes-7huy.onrender.com/wasiqr)
 
 ✅ [`BELTAH TECH SITE`](https://bel-tah-codes-7huy.onrender.com/)
 
@@ -41,7 +41,7 @@
 
 **2. If You Have a Heroku Account**
     <br>
-<p align="center"><a href="https://x-bot-fork-cheacker.vercel.app/"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FBeltah254%2FXBOT"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 ***X-BOT UPDATED FUTURES 🎁***
 
