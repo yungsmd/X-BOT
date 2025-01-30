@@ -4,19 +4,6 @@
 ***
   
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THIS IS +BELTAH-XBOT;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+BELTAH+TECH;RELEASED+03.01.2025" alt="Typing SVG" /></a>
- 
-**BELTAH XBOT NEW LOOK**
-
-<table>
-  <tr>
-    <td>MENU STYLE</td>
-    <td>MP3 PLAYER</td>
-  </tr>
-  <tr>
-    <td><a href="https://chat.whatsapp.com/JIQos2sUdGyII4qsig72pK"><img src="https://files.catbox.moe/de6o56.jpg" width="180"</td>
-    <td><a href="https://github.com/Beltah254"><img src="https://files.catbox.moe/zfi97c.jpg" width="180"</td>
-  </tr>
-</table  
   
 ***X-BOT UPDATED FUTURES 🎁***
 
@@ -48,9 +35,18 @@
 
 #### SETTING UP PROCEDURE
 
-***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/BELTAH254/X-BOT/fork) It***
+  
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=FORKING THIS REPO IS A MUST. OR ELSE YOU WON'T BE ABLE TO DEPLOY" alt="Typing SVG" /></a>
 
-***2.`Get Session ID` by  [`PAIRING CODE`](https://beltah-sessions.silvatechinc.myid/pair) or [`BELTAH SITE`](https://beltah-sessions.silvatechinc.myid/)***
+***1.`First STAR 🌟 This Repo ` And Then [`MUST FORK HERE`](https://github.com/BELTAH254/X-BOT/fork) It***
+
+***2.`Get Session ID by pairing or scanning qr` 
+
+🗿 [`PAIRING CODE`](https://bel-tah-codes-7huy.onrender.com/pair) 
+
+👻 [`SCAN QR`](https://bel-tah-codes-7huy.onrender.com/qr)
+
+✅ [`BELTAH SITE`](https://bel-tah-codes-7huy.onrender.com/)***
 
 * - Copy The Session ID for it Will be needed during deployment*
 
@@ -64,11 +60,22 @@
 
 **2. If You Have a Heroku Account**
     <br>
-<p align="center"><a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FBeltah254%2FXBOT&template=https%3A%2F%2Fgithub.com%2FBeltah254%2FXBOT"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://x-bot-fork-cheacker.vercel.app/"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 ***
+**BELTAH XBOT NEW LOOK**
 
+<table>
+  <tr>
+    <td>MENU STYLE</td>
+    <td>MP3 PLAYER</td>
+  </tr>
+  <tr>
+    <td><a href="https://chat.whatsapp.com/JIQos2sUdGyII4qsig72pK"><img src="https://files.catbox.moe/de6o56.jpg" width="180"</td>
+    <td><a href="https://github.com/Beltah254"><img src="https://files.catbox.moe/zfi97c.jpg" width="180"</td>
+  </tr>
+</table   
 
 ### DISCLAIMER 🛡 
 - Copying or modying this script is not
