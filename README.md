@@ -35,7 +35,7 @@
 <summary>𝐕𝐈𝐄𝐖 𝐋𝐀𝐓𝐄𝐒𝐓 𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐇𝐄𝐑𝐄👇</summary>
   
 
-| Commands Name               |Yes  |
+-| Commands Name               |Yes  |
 -| ----------------------------| ----|
 -| •AUTO REACT MESSAGE ADDED   | ✅  |
 -| •AUTO REPLY MESSAGE ADDED   | ✅  |
