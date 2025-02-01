@@ -1,4 +1,4 @@
-<h1 align="center">BELTAH-XBOT</h1>
+<h1 align="center">𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃</h1>
 <p align="center">  
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THIS IS +BELTAH-XBOT;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+BELTAH+TECH;RELEASED+03.01.2025" alt="Typing SVG" /></a>
@@ -30,45 +30,35 @@
 ✅ [`BELTAH TECH SITE`](https://bel-tah-codes-7huy.onrender.com/)
 
 * - Copy The Session ID for it Will be needed during deployment*
+<details>
+<summary>𝐕𝐈𝐄𝐖 𝐋𝐀𝐓𝐄𝐒𝐓 𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐇𝐄𝐑𝐄👇</summary>
+  
 
-***
+-| Commands Name               |Yes  |
+-| ----------------------------| ----|
+-| •AUTO REACT MESSAGE ADDED   | ✅  |
+-| •AUTO REPLY MESSAGE ADDED   | ✅  |
+-| •AUTO REACT STATUS ADDED    | ✅  |
+-| •AUTO READ MESSAGE ADDED    | ✅  |
+-| •AUTO REJECT CALL ADDED     | ✅  |
+-| •AUDIO REPLY ADDED          | ✅  |
+-| •AUTO SAVE CONTACTS ADDED   | ✅  |
+-| •FUN CMD HACK ADDED         | ✅  |
+-| •GPT ADDED                  | ✅  |
 
-#### DEPLOY TO HEROKU 
-**1. If You Don't Have An Account On Heroku**
-    <br>
-<p align="center"><a href="https://signup.heroku.com">
- <img src="https://img.shields.io/badge/Create%20Account%20Now-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+</details>
 
-**2. If You Have a Heroku Account**
-    <br>
-<p align="center"><a href="https://x-bot-fork-cheacker.vercel.app/"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+###  𝐃𝐄𝐏𝐋𝐎𝐘 𝐎𝐍 𝐇𝐄𝐑𝐎𝐊𝐔:
 
-***X-BOT UPDATED FUTURES 🎁***
 
-| Commands Name               |Yes  |
-| ----------------------------| ----|
-| •AUTO REACT MESSAGE ADDED   | ✅  |
-| •AUTO REPLY MESSAGE ADDED   | ✅  |
-| •AUTO REACT STATUS ADDED    | ✅  |
-| •AUTO READ MESSAGE ADDED    | ✅  |
-| •AUTO REJECT CALL ADDED     | ✅  |
-| •AUDIO REPLY ADDED          | ✅  |
-| •AUTO SAVE CONTACTS ADDED   | ✅  |
-| •FUN CMD HACK ADDED         | ✅  |
-| •GPT ADDED                  | ✅  |
-***
-**BELTAH XBOT NEW LOOK**
+ ***[![Tap to deploy on heroku](https://www.herokucdn.com/deploy/button.svg)](https://x-bot-fork-cheacker.vercel.app/)***
 
-<table>
-  <tr>
-    <td>MENU STYLE</td>
-    <td>MP3 PLAYER</td>
-  </tr>
-  <tr>
-    <td><a href="https://chat.whatsapp.com/JIQos2sUdGyII4qsig72pK"><img src="https://files.catbox.moe/de6o56.jpg" width="180"</td>
-    <td><a href="https://github.com/Beltah254"><img src="https://files.catbox.moe/zfi97c.jpg" width="180"</td>
-  </tr>
-</table   
+<br>
+
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+ 
+
 
 ### DISCLAIMER 🛡 
 - Copying or modying this script is not
