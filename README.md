@@ -35,17 +35,17 @@
 <summary>𝐕𝐈𝐄𝐖 𝐋𝐀𝐓𝐄𝐒𝐓 𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 𝐇𝐄𝐑𝐄👇</summary>
   
 
-NO.| Commands Name               |Yes  |
-1| ----------------------------| ----|
-2| •AUTO REACT MESSAGE ADDED   | ✅  |
-3| •AUTO REPLY MESSAGE ADDED   | ✅  |
-4| •AUTO REACT STATUS ADDED    | ✅  |
-5| •AUTO READ MESSAGE ADDED    | ✅  |
-6| •AUTO REJECT CALL ADDED     | ✅  |
-7| •AUDIO REPLY ADDED          | ✅  |
-8| •AUTO SAVE CONTACTS ADDED   | ✅  |
-9| •FUN CMD HACK ADDED         | ✅  |
-10| •GPT ADDED                  | ✅  |
+| Commands Name               |Yes  |
+-| ----------------------------| ----|
+-| •AUTO REACT MESSAGE ADDED   | ✅  |
+-| •AUTO REPLY MESSAGE ADDED   | ✅  |
+-| •AUTO REACT STATUS ADDED    | ✅  |
+-| •AUTO READ MESSAGE ADDED    | ✅  |
+-| •AUTO REJECT CALL ADDED     | ✅  |
+-| •AUDIO REPLY ADDED          | ✅  |
+-| •AUTO SAVE CONTACTS ADDED   | ✅  |
+-| •FUN CMD HACK ADDED         | ✅  |
+-| •GPT ADDED                  | ✅  |
 
 </details>
 
