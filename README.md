@@ -1,7 +1,7 @@
 <h1 align="center">𝐁𝐄𝐋𝐓𝐀𝐇 𝐌𝐃</h1>
 <p align="center">  
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THIS IS +BELTAH-BOT;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+BELTAH+TECH;RELEASED+03.01.2025" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THIS IS +BELTAH MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+BELTAH+TECH;RELEASED+03.01.2025" alt="Typing SVG" /></a>
   
   </p>
     <img alt="BELTAH-MD" width="700" height="300" src="https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg">
@@ -18,7 +18,7 @@
   
 
 #### SETTING UP PROCEDURE
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=890&height=80&lines=FORKING+THIS+REPO+IS+A+MUST" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=red&center=true&width=890&height=80&lines=FORKING+THIS+REPO+IS+A+MUST" alt="Typing SVG" /></a>
 ***1.`First STAR 🌟 This Repo ` And Then [`FORK`](https://github.com/BELTAH254/X-BOT/fork) It***
 
 **2.`Get Session ID by pairing or scanning qr Use 2 if 1 fails`'**
