@@ -27,9 +27,9 @@
 
 ⚙️ [`PAIR CODE 2`](https://beltah-md-sessions.onrender.com/pair) 
 
-👻 [`SCAN QR 1`](https://bel-tah-md-codes.onrender.com/wasiqr)
+👻 [`SCAN QR 1`](https://bel-tah-md-codes.onrender.com/qr)
 
-🚦 [`SCAN QR 2`](https://beltah-md-sessions.onrender.com/wasiqr)
+🚦 [`SCAN QR 2`](https://beltah-md-sessions.onrender.com/qr)
 
 ✅ [`BELTAH TECH SITE`](https://beltah-md-sessions.onrender.com/)
 
