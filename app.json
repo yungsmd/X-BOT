@@ -34,7 +34,7 @@
     },
     "BOT_NAME": {
       "description": "put A name for your bot",
-      "value": "SCENE-MD-V2",
+      "value": "oluthe",
       "required": false
     },
     "BOT_MENU_LINKS": {
@@ -49,17 +49,17 @@
     },
     "HEROKU_APY_KEY": {
       "description": "insert your heroku api-key (OPTIONAL)",
-      "value" : "", 
+      "value" : "HRKU-22cf3c12-00c2-4a75-8e76-f022f84578b6", 
       "required": false
     },
     "HEROKU_APP_NAME": {
       "description": "insert your heroku APP NAME (OPTIONAL)",
-      "value" : "", 
+      "value" : "oluthe23", 
       "required": false
     },
     "SESSION_ID": {
       "description": "put your session ID , the code you receive after scanning Qr code",
-      "value": "",
+      "value": "BELTAH-MD;;;=>eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiZ0lDN1Z0bE5Fa0cwSE9YMGE1dmc0aTFPbHFUMEo3L1RkNVBoUEUyZ3BVQT0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiNU8wajhGd1dLTVdndXdyeWZNUUplNUpHZWZBNEFweGxjdnhVekxpWGVtYz0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJpQXhKVTMzUCs4OWVIS1ZlWDFpeDdzOHZVd2ZST3AxL2lESkt5QUJHNlZrPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJDQ1d4d3hiR2h0S2xZd1lqREg3YlNpdUF6Yzl6Y0VPRDZMR3hIdjFMZWk0PSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjBKbzlvQXhNMUJjNWNHSlY4OW1WRXZVckF5ei8yenU2VFF6dTJ3SHJnazA9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkVPcFFVaWxMNlQ4N0IxQ1k5b09nRkZVR0o5NU5xaVhoRmk1UWdSSjZCVEk9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoid0FKK3hTTTNlTDhIN0dSZmJIRFVPY2Joc1FyKzA3VjZxN1NycUliRjlsZz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiOW53cWo2RnJveE1YaG9neW9LK3FWc0E0MmZmUVduR3QwMk8rVEZxaGd5MD0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6Inp3WnZkN1IvaDh6SXRDeXNZN0hvTXorVGZBY0EwSW9QZmEvdGYvV2xlYXRGNTl3TS9mY0NBUmtFNmIydDFuUk56NEFvVC9zTEhHd2hIbytyV1pRRWd3PT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MTI2LCJhZHZTZWNyZXRLZXkiOiI1ZzVDdUlpTWl4c3AzSHAwdDhKN3dHTDRqYWJUcHl6SWtRNnE1NGpZOHpJPSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W10sIm5leHRQcmVLZXlJZCI6MzEsImZpcnN0VW51cGxvYWRlZFByZUtleUlkIjozMSwiYWNjb3VudFN5bmNDb3VudGVyIjowLCJhY2NvdW50U2V0dGluZ3MiOnsidW5hcmNoaXZlQ2hhdHMiOmZhbHNlfSwiZGV2aWNlSWQiOiIzMnBVLUtid1JsbU1EaUxNVFgyN0xRIiwicGhvbmVJZCI6IjVmZDhmYzk0LTVlMjgtNGNkMC04NDQ2LTlkMmQxODcwYjZmYyIsImlkZW50aXR5SWQiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiIrR21QZ1pvSTlHazY0ZE1yd1hUaU1UdUl4azA9In0sInJlZ2lzdGVyZWQiOnRydWUsImJhY2t1cFRva2VuIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiQk9CSmMvekEvU25ZSGJUb0V0VU5BY0l5a0FzPSJ9LCJyZWdpc3RyYXRpb24iOnt9LCJwYWlyaW5nQ29kZSI6IldMS1ZLSEJBIiwibWUiOnsiaWQiOiIyNTQ3MDEzOTYzNjM6M0BzLndoYXRzYXBwLm5ldCJ9LCJhY2NvdW50Ijp7ImRldGFpbHMiOiJDSjdKclA4SEVNZkxzYjhHR0FFZ0FDZ0EiLCJhY2NvdW50U2lnbmF0dXJlS2V5IjoidWxkb0J6ZERQNlk1WVUzNSs5YVhEakJTQ2NNMGFKZWdoQWJmMGJYYjNrQT0iLCJhY2NvdW50U2lnbmF0dXJlIjoiY0VQNG1nQ09oMFFWak45Nlppdi9PczdOY1ZwSTBaTUg0K3BWR3hsSktSK3U5UHc4Z0RHTnpVa2twZjBMWElhQVRTeGZtTkM4SzRjTS85RktMRnpDQkE9PSIsImRldmljZVNpZ25hdHVyZSI6IlY5OUxzbGhEMDM5ZERHTWpwamYwTlZMYlRvOXhvRk5pV0ZIeVdEREFibUJVRFgrSEVMNDQ4SURLdDZYYlFQVTkrQ1RtQSs1RC9PZHRIdzZoVTVrVmhRPT0ifSwic2lnbmFsSWRlbnRpdGllcyI6W3siaWRlbnRpZmllciI6eyJuYW1lIjoiMjU0NzAxMzk2MzYzOjNAcy53aGF0c2FwcC5uZXQiLCJkZXZpY2VJZCI6MH0sImlkZW50aWZpZXJLZXkiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJCYnBYYUFjM1F6K21PV0ZOK2Z2V2x3NHdVZ25ETkdpWG9JUUczOUcxMjk1QSJ9fV0sInBsYXRmb3JtIjoiYW5kcm9pZCIsImxhc3RBY2NvdW50U3luY1RpbWVzdGFtcCI6MTc0MzU0NTgxMywibXlBcHBTdGF0ZUtleUlkIjoiQUFBQUFNNmkifQ==",
       "required": true
     },
     "OWNER_NAME": {
@@ -70,7 +70,7 @@
     "NUMERO_OWNER": {
       "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
       "required": false,
-      "value": "254114141192"
+      "value": "254701396363"
     },
     "WARN_COUNT": {
       "desc": "this is the limit of warn for warning commandes",
@@ -84,13 +84,13 @@
     },
     "PRESENCE": {
       "description": "Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
-      "value": "",
+      "value": "2",
       "required": false
     },
     "ANTI_DELETE_MESSAGE": {
       "description": "if you want to enable anti delete message put yes else put no",
-      "value": "no",
-      "required": false
+      "value": "yes",
+      "required": true 
     },
     "PM_CHATBOT": {
       "description": "Put yes if you want the bot to automatically respond to messages in private",
