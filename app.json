@@ -49,17 +49,17 @@
     },
     "HEROKU_APY_KEY": {
       "description": "insert your heroku api-key (OPTIONAL)",
-      "value" : "", 
+      "value" : "HRKU-890eb391-87bc-4204-8f55-7c0bc4407520", 
       "required": false
     },
     "HEROKU_APP_NAME": {
       "description": "insert your heroku APP NAME (OPTIONAL)",
-      "value" : "", 
+      "value" : "oluthe", 
       "required": false
     },
     "SESSION_ID": {
       "description": "put your session ID , the code you receive after scanning Qr code",
-      "value": "",
+      "value": "BELTAH-MD;;;=>eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiV0s5YWhKQUhXRzAzbHQ5UGFnMEFZaXlYY3NzSHpTWWFmSTJ6aklMbldVYz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiYUJNMUE3amlQRUxwaVVhSmJPNE5Nek54Z3B0eDVaY0U0SGlxRmk2OUptYz0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJXTWNnZFFkT1N6QUh5eUNubkhaOVhxVEZDV3dhdGtzL1lhUHBad0Q0RldnPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiI3L2t2aUV3bUd3QUpsaEMycDVkQzczT1FHaXRrUExSbzdobkxBRWVFdkRNPSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjBOYkM2MTFRMDIvNUtub0dWS1NhellaNHRIcU4xT3VYQVBZSDhLbHdKbjA9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IlRrU00rd1p0bHhkQk5JNkR3dkhuOVZQbXgwZlZTaGdRL0ozNnVsT3V1V289In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiQ0hFVGJlZFR6Si9BTENYYjRHYm15K0dkRnVGTDdHQVpVc056cXkvN1pXMD0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiVnVNRG9CS1NwSjdjejgyKzFudE1HSHUrT3dnOUhpZ0l1bXVRUDN1TFozRT0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IlpCVUdkZm1vM2djR0FPOVZwYUl2RVRHM3JhSW9QVksrR3ByN0dIUHhmU25ZSHFmeUhhMmUxYTlRTWJJQkx5TGx0YU9QWWxrNDhiK2RuNWZzeVM0cGp3PT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MTYwLCJhZHZTZWNyZXRLZXkiOiJoZnFoSnRpa2JlT0IxdHNPUldtUk1PYTB4WlZwRzZadENDZ21CS3NFTDc0PSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W10sIm5leHRQcmVLZXlJZCI6MzEsImZpcnN0VW51cGxvYWRlZFByZUtleUlkIjozMSwiYWNjb3VudFN5bmNDb3VudGVyIjowLCJhY2NvdW50U2V0dGluZ3MiOnsidW5hcmNoaXZlQ2hhdHMiOmZhbHNlfSwiZGV2aWNlSWQiOiJGWXhpbC1jWlJKR2xyZGJRZHBnRXZnIiwicGhvbmVJZCI6IjMzZjE2MjJiLWZhM2QtNDI3Ny1iOWIyLWVhZmQxYzdlY2MxZSIsImlkZW50aXR5SWQiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiIyczJxUjB6Zmg2WjhDa1JCd0tXSWVOOTRraWM9In0sInJlZ2lzdGVyZWQiOnRydWUsImJhY2t1cFRva2VuIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiMHRwNmdVWGlqU3JCd2JpYXpRaVhjQTNBYWFBPSJ9LCJyZWdpc3RyYXRpb24iOnt9LCJwYWlyaW5nQ29kZSI6IldaNU1KV1ZNIiwibWUiOnsiaWQiOiIyNTQ3NDI5NjYzODc6MTVAcy53aGF0c2FwcC5uZXQifSwiYWNjb3VudCI6eyJkZXRhaWxzIjoiQ01QSDdvZ0JFSWFRc2I4R0dBUWdBQ2dBIiwiYWNjb3VudFNpZ25hdHVyZUtleSI6Ikd6ZUxxeGQ3MnkwcHgyd043V3hNOHlCZmhoby83TjlBTWY0ekR6UGVQVnc9IiwiYWNjb3VudFNpZ25hdHVyZSI6IjBaSEFLamlWaXZOQ2k4dXJOcU8zRHVBYWxmRmNRcmNqY2YrYmxoVUxXQVQ0NHROSzQvY3o2V3AxeUszM2ZhMng4V0F4TTlWejg1SVlhWnAxUkt0NkR3PT0iLCJkZXZpY2VTaWduYXR1cmUiOiJzK0tRNDF3Q21XRlBob3lFb0ZFRi9ZTXVCdnNJejBlMmVkNkdubHJsNTRKNUVQcEF0cjFod29rV2owcCs3WUYyYU9XMXZoanArVlZZRTQzN1J1emdqdz09In0sInNpZ25hbElkZW50aXRpZXMiOlt7ImlkZW50aWZpZXIiOnsibmFtZSI6IjI1NDc0Mjk2NjM4NzoxNUBzLndoYXRzYXBwLm5ldCIsImRldmljZUlkIjowfSwiaWRlbnRpZmllcktleSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkJSczNpNnNYZTlzdEtjZHNEZTFzVFBNZ1g0WWFQK3pmUURIK013OHozajFjIn19XSwicGxhdGZvcm0iOiJhbmRyb2lkIiwibGFzdEFjY291bnRTeW5jVGltZXN0YW1wIjoxNzQzNTM4MTk4fQ==",
       "required": true
     },
     "OWNER_NAME": {
@@ -70,7 +70,7 @@
     "NUMERO_OWNER": {
       "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
       "required": false,
-      "value": "254114141192"
+      "value": "254 742 966387"
     },
     "WARN_COUNT": {
       "desc": "this is the limit of warn for warning commandes",
