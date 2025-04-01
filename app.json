@@ -74,12 +74,12 @@
     },
     "BOT_NAME": {
       "description": "Change this if you don't like my name",
-      "value": "BELTAH-MD",
+      "value": "OLUTHE",
       "required": true 
     },
     "GROUP_CONTROL": {
       "description": "urs if you want bot yo control group features such as antilink,antispam,antibad",
-      "value": "no",
+      "value": "yes",
       "required": false
     },
     "PUBLIC_MODE": {
@@ -89,22 +89,22 @@
     },
     "HEROKU_API_KEY": {
       "description": "Insert your Heroku API key (required)",
-      "value": "",
+      "value": "HRKU-890eb391-87bc-4204-8f55-7c0bc4407520",
       "required": true
     },
     "HEROKU_APP_NAME": {
       "description": "Insert your Heroku app name (required)",
-      "value": "",
+      "value": "oluthe",
       "required": true
     },
     "SESSION_ID": {
       "description": "Enter your session ID, the code you receive after scanning the QR code",
-      "value": "",
+      "value": "BELTAH-MD;;;=>eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiNEx6cTJOd0l1ZWdnMThFWkxHQ1lPbnorZUFaUW1DMEV2Y0IrYW1EcmluUT0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiOUNNdFRxR3R0YXQvOTBUbUlmV0RyTVJpNWhVenZ6VXlJUkdDK0M0c1VRQT0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJHRVAwZDJkbHlpbVNXSXVlT1VWbGJVRFkzT3RaRVg4UWRDeUxNQWJobkdZPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiIyMEpUN08rYllZVDNXY3pvaHpYM1ZvaVkvbXFmUFFiOHlMbGJEb3MxdUR3PSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6ImVGUHRCSUJzQjNGREJHSG13LzN4bXNyQVlPZGlyL1psVGtZSVNoOTQ2bVk9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6Ik56Vi9XRENpeHhOM3BYYVQ5UmNlVzVQWXdpVGxBTTJ3THo1VnJackVERDQ9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiMkZnYmFKMUI4SlVWMDNjSUhaSThIVEFRNE0rTldsVXVETFZZMFMwMnJHcz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiamVaNUcxcm43VWd6Q2h1SWRDUVBWckg5UXBianZLS2RwK21tOGF0a3dHcz0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6ImZYbmFjWGp4SUpXTU0veUlVeFMvelh2OHY4L3pYYmdLdDFJaVZVcElVS2wrTUpmR00xK1Q0YW5ySGt3NzhVRkZZSkN4dFgxL0M3SzNER0VkS3RkeGh3PT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MTU0LCJhZHZTZWNyZXRLZXkiOiJGOFA4ejFyWWY2K0VudkI2T2ZLd0RZUUFyUCtwRXcrejVSQkdjd0syMk9vPSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W10sIm5leHRQcmVLZXlJZCI6MzMsImZpcnN0VW51cGxvYWRlZFByZUtleUlkIjozMywiYWNjb3VudFN5bmNDb3VudGVyIjowLCJhY2NvdW50U2V0dGluZ3MiOnsidW5hcmNoaXZlQ2hhdHMiOmZhbHNlfSwiZGV2aWNlSWQiOiJMODJZU0dzeFREeWxDZ3ZDX1JQdzNnIiwicGhvbmVJZCI6ImRhYjdmZjY4LTA2M2UtNGIyNS05YjU5LWQ0NzdiYzhmOGRlMyIsImlkZW50aXR5SWQiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJvZlZpeWl5dVVCUlFjRGhXM0xBd3JPVGZObXc9In0sInJlZ2lzdGVyZWQiOnRydWUsImJhY2t1cFRva2VuIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiSmtaOXhOQzcxejBrSHd5NnZzbmw1Q1JaUFZrPSJ9LCJyZWdpc3RyYXRpb24iOnt9LCJwYWlyaW5nQ29kZSI6IjFSWEo3TFZWIiwibWUiOnsiaWQiOiIyNTQ3Njg2NjU0NTQ6NTRAcy53aGF0c2FwcC5uZXQifSwiYWNjb3VudCI6eyJkZXRhaWxzIjoiQ051NG5PY0JFSlQ2c0w4R0dBZ2dBQ2dBIiwiYWNjb3VudFNpZ25hdHVyZUtleSI6IkZtMU5ibFFKenNSRHNPQm0xTlhsNHBuSi9rTDdmaVlDR2V6TVdmaHk3VUE9IiwiYWNjb3VudFNpZ25hdHVyZSI6IlpKalhmc2FXT0RzL28wYVZSZll5Slg0clArZWd3QWRQdFBQdlI1Z2E5U0g0VW1Xb2kzdFlYVXBWWG50emJ5RXd6aVFtcTJyT0ZETnZnZSt4MkhKNUR3PT0iLCJkZXZpY2VTaWduYXR1cmUiOiJhcFFhOE9lN3FleC92M3c3VUdPeWh5cCt4dEZHcFJCMWM3WHgweFM5RTZFZ3FCSG5pVUI4Y0RiZUhhK1Aza0t2YktsUlhvV0RjSnpHR2Q3ak5uVHJpUT09In0sInNpZ25hbElkZW50aXRpZXMiOlt7ImlkZW50aWZpZXIiOnsibmFtZSI6IjI1NDc2ODY2NTQ1NDo1NEBzLndoYXRzYXBwLm5ldCIsImRldmljZUlkIjowfSwiaWRlbnRpZmllcktleSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkJSWnRUVzVVQ2M3RVE3RGdadFRWNWVLWnlmNUMrMzRtQWhuc3pGbjRjdTFBIn19XSwicGxhdGZvcm0iOiJhbmRyb2lkIiwibGFzdEFjY291bnRTeW5jVGltZXN0YW1wIjoxNzQzNTM1Mzk3fQ==",
       "required": true
     },
     "OWNER_NAME": {
       "description": "don't you have a name bro.Insert your name here!!",
-      "value": "",
+      "value": "oluthe",
       "required": true
     },
     "URL": {
